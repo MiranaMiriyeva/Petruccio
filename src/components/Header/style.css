@@ -1,0 +1,59 @@
+.header-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cheesy-logo {
+    width: 100px;
+    z-index: -1;
+  }
+  
+  .melting-cheese {
+    width: 470px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -2;
+  }
+  
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Ekledik: Küçük ekranlarda wrap olması için */
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    margin: 0 10px;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+  }
+  .navbar a:hover{
+    text-shadow:  -1px 2px 2px rgba(238,131,20,0.6);;
+  }
+  
+  /* Ekran boyutu 600px'den küçük olduğunda */
+  @media (max-width: 600px) {
+    .navbar {
+      justify-content: flex-start;
+      width: 100%;
+    }
+  
+    .melting-cheese {
+      display: none; /* Ekledik: Melted cheese'i gizle */
+    }
+  }
+  

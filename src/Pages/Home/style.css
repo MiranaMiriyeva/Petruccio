@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    font-family: 'Playpen Sans', cursive;
+   
+}
+  
+.home-container {
+    text-align: center;
+    padding: 50px;
+     position: relative;
+}
+
+.home-background {
+    background-image: url('https://www.maya.ph/hubfs/Most-Popular_Fast-Food.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 610px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards; 
+    box-shadow: 0px -10px 30px #0000007c;
+    z-index: -2;
+    
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.home-title {
+    color: #fff; 
+    font-size: 48px;
+    opacity: 0;
+    animation: fadeInText 2s ease-in-out forwards; 
+    text-shadow: 1px 1px 5px #000;
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* İstediğiniz başlangıç konumu */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Bitiş konumu, eğer hareket etmesini istiyorsanız değeri ayarlayabilirsiniz */
+    }
+}
+.highlight-text {
+    color: #EE8314; /* Use the color you want to emphasize */
+    font-weight: bold;
+    
+  }
