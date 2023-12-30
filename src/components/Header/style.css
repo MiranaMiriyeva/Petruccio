@@ -30,7 +30,7 @@
   .navbar {
     display: flex;
     align-items: center;
-    flex-wrap: wrap; /* Ekledik: Küçük ekranlarda wrap olması için */
+    flex-wrap: wrap; 
   }
   
   .navbar a {
@@ -45,7 +45,6 @@
     text-shadow:  -1px 2px 2px rgba(238,131,20,0.6);;
   }
   
-  /* Ekran boyutu 600px'den küçük olduğunda */
   @media (max-width: 600px) {
     .navbar {
       justify-content: flex-start;
@@ -53,7 +52,7 @@
     }
   
     .melting-cheese {
-      display: none; /* Ekledik: Melted cheese'i gizle */
+      display: none; 
     }
   }
   

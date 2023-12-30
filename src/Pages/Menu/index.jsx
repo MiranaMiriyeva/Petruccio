@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./style.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
-import { addToFavorites, removeFromFavorites } from '../../redux/actions/favorires.actions';
+import { addToFavorites, addToOrders, removeFromFavorites } from '../../redux/actions/actions';
 import { useDispatch, useSelector } from 'react-redux';
-import { faHeart as faHeartSolid } from '@fortawesome/free-solid-svg-icons';
+import { faHeart as faHeartSolid, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import Modal from '../Modals/AddedToOrder';
+
+
 
 
 
@@ -287,12 +290,41 @@ const data = [
     ],
   },
 ];
-
-
 const Menu = () => {
   const favorites = useSelector(state => state.favorites)
   const dispatch = useDispatch();
+  const orders = useSelector(state => state.orders)
+  const dis = useDispatch();
+  
+  const [orderCount, setOrderCount] = useState({});
+  const handleAddToOrder = (itemId) => {
+    if (!orders.some(orderItem => orderItem.id === itemId)) {
+      setOrderCount((prevCount) => ({
+        ...prevCount,
+        [itemId]: (prevCount[itemId] || 1) + 1,
+      }));
+      dis(addToOrders(item));
+    }
+  };
 
+  const handleRemoveFromOrder = (itemId) => {
+    if (orderCount[itemId] && orderCount[itemId] > 1) {
+      setOrderCount(prevCount => ({
+        ...prevCount,
+        [itemId]: prevCount[itemId] - 1,
+      }));
+    }
+  };
+  const [modalOpened, setModalOpened] = useState(false);
+
+
+  const modalOpen= () => {
+    setModalOpened(true);
+  };
+
+  const modalClosed = () => {
+    setModalOpened(false);
+  };
   return (
     <div className='container'>
       {data.map((category, index) => (
@@ -305,33 +337,54 @@ const Menu = () => {
                 <hr />
                 <div className="image-container" style={{ position: 'relative' }}>
                   <img src={item.image} alt={item.name} />
-                  {favorites.find(prop => prop.id === item.id) ? <span className='fav-icon' onClick={() => dispatch(removeFromFavorites(item.id))}>
-                    <FontAwesomeIcon
-                      icon={faHeartSolid}
-                      style={{
-                        position: 'absolute',
-                        top: '5px',
-                        right: '5px',
-                        color: '#ff0000',
-                        fontSize: '2.5em',
-                      }}
-                    />
-                  </span> : <span className='fav-icon' onClick={() => dispatch(addToFavorites(item))}>
-                    <FontAwesomeIcon
-                      icon={faHeart}
-                      style={{
-                        position: 'absolute',
-                        top: '5px',
-                        right: '5px',
-                        color: '#ff0000',
-                        fontSize: '2.5em',
-                      }}
-                    />
-                  </span>}
-
+                  {favorites.find(prop => prop.id === item.id) ? (
+                    <span className='fav-icon' onClick={() => dispatch(removeFromFavorites(item.id))}>
+                      <FontAwesomeIcon
+                        icon={faHeartSolid}
+                        style={{
+                          position: 'absolute',
+                          top: '5px',
+                          right: '5px',
+                          color: '#ff0000',
+                          fontSize: '2.5em',
+                        }}
+                      />
+                    </span>
+                  ) : (
+                    <span className='fav-icon' onClick={() => dispatch(addToFavorites(item))}>
+                      <FontAwesomeIcon
+                        icon={faHeart}
+                        style={{
+                          position: 'absolute',
+                          top: '5px',
+                          right: '5px',
+                          color: '#ff0000',
+                          fontSize: '2.5em',
+                        }}
+                      />
+                    </span>
+                  )}
                 </div>
                 <p className='description'>{item.description}</p>
-                <button className='price'>{item.price}  $</button>
+                <div className='button-container'>
+                  <button className='price'>{item.price} $</button>
+                  <div className='order-container'>
+                    <div className='order-controls'>
+                      <button onClick={() => handleRemoveFromOrder(item.id)}>-</button>
+                      <span className='order-count'>{orderCount[item.id] || 1}</span>
+                      <button onClick={() => handleAddToOrder(item.id)}>+</button>
+                    </div>
+                    <span onClick={() => { dis(addToOrders(item)); modalOpen(); }}>
+                      <FontAwesomeIcon className='order-button' icon={faShoppingCart} style={{ color: 'green' }} />
+                    </span>
+                     {modalOpened && (
+                    <Modal close={modalClosed}>
+                      <p>Successfully added to cart! </p>
+                      <p>Go to Order to confirm the cart.</p>
+                    </Modal>
+                  )}
+                  </div>
+                </div>
               </div>
             ))}
           </div>
@@ -339,6 +392,6 @@ const Menu = () => {
       ))}
     </div>
   );
-};
+}
 
 export default Menu;

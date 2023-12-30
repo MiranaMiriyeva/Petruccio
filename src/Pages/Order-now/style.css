@@ -1,0 +1,111 @@
+.categoryname-orders{
+    padding: 15px;
+    border: 2px solid #d9b88b;
+    color: #facc08;
+    text-shadow: 1px 1px 1px #ee8314;
+}
+.description-orders{
+    margin-top:100px;
+    width: 800px;
+}
+.container-orders {
+    margin: 10px;
+}
+.card-orders{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    align-items: center;
+    position: relative;
+}
+.baseline{
+    display: flex;
+    flex-direction: column;
+}
+.price-orders{
+    margin-top: 30px;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    text-align: end;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+.trash-icon{
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    cursor: pointer;
+}
+.item-name-orders{
+    text-shadow: 1px 1px 1px #ee8314;
+}
+.confirm-cart{
+    display: block;
+    padding: 10px 20px;
+    margin: 0 auto 15px;
+    font-size: 16px;
+    text-align: center;
+    justify-content: center;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #ffcc00, #ff6600);
+    border: none;
+    cursor: pointer;
+  }
+  .confirm-cart:hover {
+    background: linear-gradient(45deg, #ff6600, #ffcc00);
+  }
+  .order-form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .order-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .order-form input,
+  .order-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  
+  .order-form div {
+    margin-bottom: 10px;
+  }
+  
+  .order-form .credit-card-details {
+    margin-top: 10px;
+  }
+  
+
+ 
+  .payment-options {
+    display: flex; 
+    flex-direction: row-reverse; 
+    align-items: flex-start; 
+    justify-content: space-evenly;
+    margin: 10px 0; 
+  }
+  
+  .payment-options div {
+    margin-bottom: 5px; 
+  }
+  .error-message{
+    color: red;
+    font-size: 13px;
+  }
+  .smiling-face-container {
+    margin: 0 auto;
+  }
+  
+  .smiling-face {
+    font-size: 2em; 
+    text-shadow: 2px 2px 2px #333;
+  }

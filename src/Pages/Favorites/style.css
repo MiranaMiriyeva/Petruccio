@@ -49,6 +49,44 @@
     cursor: pointer;
 }
 
+.order-container{
+    padding: 5px;
+    border: 2px solid #14cc17;
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .order-controls button {
+    margin: 0 5px;
+    padding: 8px 12px;
+    font-size: 20px;
+    background-color: #F5EBDC;
+    color: #4caf50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .order-controls button:hover {
+    background-color: #45a0494b;
+  }
+  
+  
+  .order-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .order-button:hover {
+    background-color: #45a0494b;
+  }
+  
+  
 .item-name-favorites {
     text-shadow: 1px 1px 1px #ee8314;
 }
