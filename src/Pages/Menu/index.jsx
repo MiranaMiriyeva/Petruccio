@@ -175,28 +175,28 @@ const data = [
         name: 'Coca-Cola',
         description: '0.5 l',
         price: 2,
-        image: 'https://www.kfc-az.com/admin/files/5415.png',
+        image: 'https://pngimg.com/d/cocacola_PNG10.png',
       },
       {
         id: 22,
         name: "Fanta",
         description: "0.5 l",
         price: 2,
-        image: "https://www.mystore.in/s/62ea2c599d1398fa16dbae0a/65050187eb3e198d58d4c78d/y2vj63esozdyxdkzishfebq_ldpsy3nb38d2sxsqthrwygqmwz7-4liyfkx1mdqzujoxtlhq0mwga6jvzb8y7zdzb5aemglgirterrt-.png"
+        image: "https://www.shoprite.co.za/medias/10640177EA-checkers515Wx515H?context=bWFzdGVyfGltYWdlc3wxMDY1NjR8aW1hZ2UvcG5nfGltYWdlcy9oMGIvaGQyLzEwNDAzMjUyNDM3MDIyLnBuZ3xlZTc2ZjdkZTdmOWZiYzk3YWEyNzgwYTYyNDRlYmJhZTRjYTk1MjZiYzIzYmMwNjgwMjI0M2I5Mjg0ZDI0NTc3"
       },
       {
         id: 23,
         name: "Sprite",
         description: "0.5 l",
         price: 2,
-        image: "https://www.kfc-az.com/admin/files/5418.png"
+        image: "https://www.mystore.in/s/62ea2c599d1398fa16dbae0a/6539951e977ff0b13ad24d5b/cd219e70-68f9-11ee-a678-a27cd4b5bbdd.png"
       },
       {
         id: 24,
         name: "Water",
         description: "0.5 l ",
         price: 1,
-        image: "https://www.kfc-az.com/admin/files/5427.png"
+        image: "https://pngimg.com/d/water_bottle_PNG10157.png"
       },
       {
         id: 25,

@@ -1,6 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.css'; 
+import { Carousel } from 'react-bootstrap';
+//import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+
 const Home = () => {
+
+
   return (
     <div>
     <div className='home-background'>
@@ -11,15 +18,28 @@ const Home = () => {
         </h1>
       </div>
       </div>
+    
+      <Carousel>
+        <Carousel.Item>
+           <img className='carousel-img' src="https://marketplace.canva.com/EAFNpGUA1K4/1/0/800w/canva-black-and-yellow-restaurant-%26-fast-food-facebook-cover-SKk_1e9NKg8.jpg" alt="pizza" /> 
+        </Carousel.Item>
+        <Carousel.Item>
+        <img className='carousel-img' src="https://marketplace.canva.com/EAFzL899tRs/1/0/800w/canva-black-modern-pizza-food-promotion-facebook-cover-3DYmHPsB3FE.jpg" alt="pizza" /> 
+        </Carousel.Item>
+        <Carousel.Item>
+           <img className='carousel-img' src="https://marketplace.canva.com/EAFj1LczOk4/1/0/800w/canva-orange-%26-black-hamburger-facebook-cover-1gWeaHNijH8.jpg" alt="pizza" /> 
+        </Carousel.Item>
+        <Carousel.Item>
+        <img className='carousel-img' src="https://marketplace.canva.com/EAFcstgfmb0/1/0/800w/canva-black-white-modern-special-menu-food-facebook-cover-QtYBYbwQYu4.jpg" alt="pizza" /> 
+        </Carousel.Item>
+      </Carousel>
       <div className='main'>
         <img className='main-img' src="https://t3.ftcdn.net/jpg/00/27/57/96/360_F_27579652_tM7V4fZBBw8RLmZo0Bi8WhtO2EosTRFD.jpg" alt="pizza" />
         <div className='main-text'>
           <h3>The Summit of Flavor: Thin Crust, Abundant Toppings, Perfect Taste!</h3>
-          <p>In our Fast Food Paradise, where a symphony of mouthwatering pizzas beckons, promising to transport your taste buds on a gastronomic journey to unparalleled heights of delight. Our culinary artisans have meticulously curated a dazzling array of pizzas, each a masterpiece crafted with precision and passion.
+          <p>In our Fast Food Paradise, where a symphony of mouthwatering pizzas beckons, promising to transport your taste buds on a gastronomic journey to unparalleled heights of delight. 
 
-          Embark on a culinary adventure with our pizzas, where a harmonious blend of meticulously selected ingredients dances upon a canvas of expertise, resulting in a tantalizing explosion of flavors. The heart of our creations lies in the finesse of a thin crust, expertly prepared to ensure each bite delivers an exquisite and unforgettable taste sensation.
-
-          Indulge in the extraordinary as you explore a menu designed to elevate your dining experience. From classic favorites to innovative delights, our pizzas are a testament to the artistry of flavor, promising a feast for your senses. Discover the magic that unfolds when passion meets craftsmanship, and treat yourself to the extraordinary world of flavor that awaits you at our Fast Food Haven..</p>
+           From classic favorites to innovative delights, our pizzas are a testament to the artistry of flavor, promising a feast for your senses. Discover the magic that unfolds when passion meets craftsmanship, and treat yourself to the extraordinary world of flavor that awaits you at our Fast Food Haven..</p>
           </div>           
       </div>
       <div className='main'>
@@ -27,9 +47,7 @@ const Home = () => {
           <h3>Journey into Flavor: Explore Our Delectable Burger Kingdom!</h3>
           <p>Our burgers deliver a burst of flavor, enriched with special recipes and secret sauces. Each bite invites you to a flavor symphony where fresh ingredients and delicious patties dance in perfect harmony.
 
-          Delicious patties crafted from high-quality meats meet carefully selected fresh vegetables and unique sauces. The light and tasty burger buns will take you on a journey of flavors with every bite.
-
-          In our Fast Food Kingdom, burgers are more than just a meal; they are a flavor experience. Each burger is a masterpiece from the hands of passionate culinary artists. We invite you to discover these magnificent burgers that will satisfy your hunger and delight your taste buds. Join us on this gastronomic adventure to push the boundaries of flavor!</p>
+          Delicious patties crafted from high-quality meats meet carefully selected fresh vegetables and unique sauces. The light and tasty burger buns will take you on a journey of flavors with every bite.</p>
           </div>  
           
         <img className='main-img' src="https://www.tastingtable.com/img/gallery/what-makes-restaurant-burgers-taste-different-from-homemade-burgers-upgrade/l-intro-1662064407.jpg" alt="pizza" />         
@@ -60,5 +78,6 @@ const Home = () => {
    </div>
   );
 };
+
 
 export default Home;

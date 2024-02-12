@@ -9,6 +9,8 @@ import './App.css';
 import Footer from './components/Footer'
 import Favorites from './Pages/Favorites'
 
+
+
 const App = () => {
   return (
     <>
