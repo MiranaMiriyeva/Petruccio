@@ -1,26 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import CheesyLogo from '../../images/Cheesy-logo-second.jpg';
 import './style.css';
+import { useDispatch, useSelector } from 'react-redux';
 
 const Header = () => {
-  const cheeseImageUrl  = 'https://i.pinimg.com/originals/98/a8/b9/98a8b95f21e433a1e7874212fd26bb03.png'; 
-  const meltedImageUrl = "https://png.pngtree.com/png-clipart/20231017/original/pngtree-slice-of-melting-mozzarella-pizza-png-image_13327683.png"
+  const favorites = useSelector(state => state.favorites);
+  const dispatch = useDispatch();
+  const orders = useSelector(state => state.orders);
+  const dis = useDispatch();
+  
   return (
     <div>
-      <div className='header-container'>
-        <div className='navbar-container'>
-          <img className='cheesy-logo' src={CheesyLogo} alt='logo' />
-          <div className='navbar'>
-            <Link to='/'>Home</Link>
-            <Link to='/menu'>Menu</Link>
-            <Link to='/Favorites'>Favorites</Link>
-            <Link to='/order'>Order</Link>
-            <Link to='/aboutus'>About Us</Link>
-          </div>
+      <header>
+        <a href="#" className="logo">
+          <img src="img/logo.png" alt="logo" />
+        </a>
+        <div className="navbar">
+          <Link to='/'>Home</Link>
+          <Link to='/menu'>Menu</Link>
+          <Link to='/Favorites' style={{ color: favorites.length > 0 ? 'red' : 'black' }}>Favorites</Link>
+          <Link to='/order' style={{ position: 'relative' }}>
+            Order
+            {orders.length > 0 && <span className="order-count-header">{orders.length}</span>}
+          </Link>
+          <Link to='/aboutus'>About Us</Link>
+          <div className="bx bx-menu" id="menu-icon" />
         </div>
-        <img className='melting-cheese' src={cheeseImageUrl} alt='melted cheese' />
-      </div>
+      </header>
     </div>
   );
 };

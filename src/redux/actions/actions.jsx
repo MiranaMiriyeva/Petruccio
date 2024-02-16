@@ -17,3 +17,12 @@ export const removeFromOrders = (payload) => ({
   type: 'REMOVE_FROM_ORDERS',
   payload,
 });
+export const increaseItemCount = (itemId) => ({
+  type: 'INCREASE_ITEM_COUNT',
+  payload: itemId,
+});
+
+export const decreaseItemCount = (itemId) => ({
+  type: 'DECREASE_ITEM_COUNT',
+  payload: itemId,
+});

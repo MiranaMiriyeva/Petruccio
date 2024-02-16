@@ -1,4 +1,3 @@
-
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -14,15 +13,15 @@
     padding: 15px;
     text-align: center;
     margin-bottom: 20px;
-    
   }
   
-  .category {
-    background-color: #f3e2ca;
-  }
+ 
   
   .card {
     box-shadow: 8px 10px 20px -6px rgba(0, 0, 0, 0.25);
+  }
+  .card:hover{
+    box-shadow: 8px 10px 20px -6px rgba(153, 12, 12, 0.25);
   }
   
   .card img {
@@ -44,7 +43,6 @@
     position: absolute;
     bottom: 0;
     right: 30px;
-    color: #14cc17;
   }
   
   .card-container {
@@ -53,6 +51,7 @@
     gap: 20px;
     justify-content: center;
     transition: transform 0.2s ease-in-out;
+  
   }
   
   .card-container .card {
@@ -67,73 +66,102 @@
   
   .categoryname {
     padding: 15px;
-    border: 2px solid #d9b88b;
-    color: #facc08;
-    text-shadow: 1px 1px 1px #ee8314;
+    border: 2px solid #333;
+    color: red;
+    text-shadow: 1px 1px 1px #333;
+    margin: 10px 0;
   }
   
-  .price {
+   .price {
     margin-top: 30px;
-    background-color: #4caf50;
-    color: white;
+    color: #333;
     padding: 10px 20px;
     text-align: end;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 24px;
     border-radius: 5px;
     border: none;
     cursor: pointer;
-  }
+  } 
+
+.order-button{
+  display: inline-block;
+  padding:.4rem 1.5rem;
+  border:.1rem solid green;
+  color:green;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-radius: .5rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  margin-top: 1rem;
+  box-shadow: inset 1px 1px 30px rgba(0, 128, 0, 0.203)}
+
+.order-button::before{
+  content: '';
+  position: absolute;
+  top:0; right: 0;
+  width:0%;
+  height:100%;
+  background: green;
+  transition: .3s linear;
+  z-index: -1;
+}
+.order-button:hover{
+  color: #fff;
+  border: .1rem solid green;
+}
+.order-button:hover::before{
+  width:100%;
+  left: 0;
   
+}
+
   .item-name {
-    text-shadow: 1px 1px 1px #ee8314;
+    color: red;
+    text-shadow: 1px 1px 1px #333;
+    margin: 10px 0;
   }
   
   
-  .order-container{
+ .order-container{
     padding: 5px;
-    border: 2px solid #14cc17;
     margin: 10px;
     display: flex;
     justify-content: space-around;
+  
+ }
+ .scroll-top{
+	position: fixed;
+	bottom: 2.2rem;
+	right: 2.2rem;
+  border-radius: 5rem;
+}
+.scroll-top i{
+	padding: 8px;
+	font-size: 1.4rem;
+	color: #fff;
+	background: var(--main-color);
+	border-radius: 5rem;
+}
+
+  
+  @media (max-width: 800px) {
+    .container {
+      margin: 150px 10px 0 10px;
+    }
+  
+    .card-container .card {
+      width: calc(100% - 20px);
+    }
   }
-  
-  .order-controls button {
-    margin: 0 5px;
-    padding: 8px 12px;
-    font-size: 20px;
-    background-color: #F5EBDC;
-    color: #4caf50;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .order-controls button:hover {
-    background-color: #45a0494b;
-  }
-  
-  
-  .order-button {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .order-button:hover {
-    background-color: #45a0494b;
-  }
-  
-  
-  @media (max-width: 700px) {
+  @media (min-width: 800px) and ( max-width:1290px) {
     .container {
       margin: 0 10px;
     }
   
     .card-container .card {
-      width: calc(100% - 20px);
+      width: calc(50% - 20px);
     }
   }

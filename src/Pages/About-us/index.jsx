@@ -24,11 +24,16 @@ const Aboutus = () => {
       <h2>Community Connection</h2>
       <p>Cheesy is more than just a restaurant; it's a community. We are proud to be part of the neighborhoods we serve and actively contribute to local events and initiatives. Our commitment to community extends beyond our kitchen, making Cheesy a place where everyone feels at home. Join us at Cheesy, where every meal tells a story of passion, quality, and the joy of savoring delicious moments. We look forward to sharing the Cheesy experience with you.</p>
     </div>
-    <div className='aboutus-icons'>
-      <img src="https://cdn-icons-png.flaticon.com/512/1149/1149912.png" alt="" />
+    <div className='aboutus-left-icons'>
       <img src="https://static.vecteezy.com/system/resources/thumbnails/011/199/264/small/cute-french-fries-cartoon-illustration-png.png" alt="" />
-      <img src="https://png.pngtree.com/png-clipart/20230927/original/pngtree-cute-cartoon-burger-png-image_13144568.png" alt="" />
+      <img src="https://static.vecteezy.com/system/resources/previews/018/931/418/original/cartoon-sauces-icon-png.png" />
       <img src="https://png.pngtree.com/png-clipart/20230216/ourmid/pngtree-cute-pizza-slice-clip-art-illustration-png-image_6602536.png" alt="" />
+    </div>
+    <div className='aboutus-right-icons'>
+      <img src="https://cdn-icons-png.flaticon.com/512/1149/1149912.png" alt="" />
+      <img src="https://png.pngtree.com/png-clipart/20230927/original/pngtree-cute-cartoon-burger-png-image_13144568.png"  alt="" />
+      <img src="https://cdn-icons-png.flaticon.com/512/2794/2794486.png" alt="" />
+      
     </div>
     </div>
   );

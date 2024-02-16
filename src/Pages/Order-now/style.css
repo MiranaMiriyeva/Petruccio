@@ -1,15 +1,16 @@
 .categoryname-orders{
-    padding: 15px;
-    border: 2px solid #d9b88b;
-    color: #facc08;
-    text-shadow: 1px 1px 1px #ee8314;
+  display: flex;
+  justify-content: center;
+  color: red;
+  text-shadow: 1px 1px 1px #333;
+  
 }
-.description-orders{
-    margin-top:100px;
-    width: 800px;
-}
+
 .container-orders {
-    margin: 10px;
+    margin: 40px 20%;
+    padding: 20px 50px;
+    border: 2px solid #333;
+    box-shadow: 0px 2px 20px #33333339;
 }
 .card-orders{
     display: flex;
@@ -17,32 +18,67 @@
     gap:20px;
     align-items: center;
     position: relative;
+    justify-content: space-between;
 }
+.card-orders img {
+  max-width: 50%;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
 .baseline{
     display: flex;
     flex-direction: column;
 }
 .price-orders{
-    margin-top: 30px;
-    background-color: #4caf50;
-    color: white;
+    color: black;
     padding: 10px 20px;
-    text-align: end;
+    border: 1px solid green;
     text-decoration: none;
-    font-size: 16px;
-    border-radius: 5px;
-    border: none;
+    font-size: 25px;
+    
     cursor: pointer;
+    display: flex;
+    text-align: end;
+}
+.left-side-orders{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
 }
 .trash-icon{
-    position: absolute;
-    top: 50%;
-    right: 5%;
     cursor: pointer;
 }
 .item-name-orders{
-    text-shadow: 1px 1px 1px #ee8314;
+  margin:  15px 0;
 }
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.actions button {
+  padding: 5px 15px;
+  border: 1px solid red;
+  background-color: #fff;
+  color: red;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.actions button:hover {
+ box-shadow: inset 0px 1px 20px rgba(255, 0, 0, 0.333);
+}
+
+.actions span.order-count {
+  margin: 0 10px;
+  font-size: 16px;
+  color: #000;
+  font-size: 23px;
+}
+
 .confirm-cart{
     display: block;
     padding: 10px 20px;
@@ -106,6 +142,116 @@
   }
   
   .smiling-face {
-    font-size: 2em; 
+    font-size: 1.5em; 
+
     text-shadow: 2px 2px 2px #333;
   }
+/* Accordion Content Styles */
+.accordion-content {
+  margin-top: 16px;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.order-form label {
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+
+.order-form input,
+.order-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.order-form input[type="radio"] {
+  margin-right: 8px;
+}
+.methodOfPay{
+  display: flex;
+  flex-direction: row;
+  column-gap: 15px;
+}
+.order-form button {
+  display: inline-block;
+  padding:.4rem 1.5rem;
+  border:.1rem solid green;
+  color:green;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-radius: .5rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  margin-top: 1rem;
+  box-shadow: inset 1px 1px 30px rgba(0, 128, 0, 0.203)}
+.order-form button::before{
+  content: '';
+  position: absolute;
+  top:0; right: 0;
+  width:0%;
+  height:100%;
+  background: green;
+  transition: .3s linear;
+  z-index: -1;
+}
+.order-form button:hover{
+  color: #fff;
+  border: .1rem solid green;
+}
+.order-form button:hover::before{
+  width:100%;
+  left: 0;
+  
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 16px;
+}
+@media screen and (max-width: 1000px) {
+  .container-orders {
+    margin: 40px 10%;
+    padding: 20px 30px;
+  }
+
+  .card-orders {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .left-side-orders {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .card-orders img {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-left: 20%;
+  }
+  .trash-icon{
+    margin: 5% 0%;
+}
+.categoryname-orders{
+  margin-top: 20%;
+  
+}
+}
+@media screen and (max-width: 600px) {
+  .categoryname-orders{
+    margin-top: 40%;
+    
+  }
+}

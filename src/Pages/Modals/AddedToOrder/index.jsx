@@ -1,17 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import "./style.css"
-import { Link } from 'react-router-dom';
 const Modal = ({ close, children }) => {
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      close();
+    }, 4000);
+
+    return () => clearTimeout(timeout);
+  }, [close]);
+
   return (
     <div className='modal-container'>
       <div className='modal'>
         {children}
-        <button className='close-modal' onClick={close}>X</button>
-        <button className='go-to-menu' >
-          <Link to='/order' style={{ textDecoration: 'none', color: '#ffffff' }}>
-            Go To Order
-          </Link>
-        </button>
+
       </div>
     </div>
   );

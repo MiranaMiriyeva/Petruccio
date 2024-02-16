@@ -1,6 +1,9 @@
+body{
+  margin-top: 150px;
+}
 .aboutus-container {
     max-width: 800px;
-    margin: 20px auto;
+    margin:  20px auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
@@ -20,17 +23,39 @@
     margin-top: 20px;
     margin-bottom: 10px;
   }
-  .aboutus-icons img{
+ 
+  .aboutus-left-icons img{
   height: 200px;
   display: flex;
   flex-direction: column;
   }
+  .aboutus-right-icons img{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    }
   
-  .aboutus-icons{
+  .aboutus-left-icons{
   position: absolute;
-  top: 200px;
+  top: 130px;
   left: 50px;
   display: grid;
-  gap: 50px;
+  gap: 100px;
+  animation:float 10s linear infinite;
 }
-  
+.aboutus-right-icons{
+  position: absolute;
+  top: 130px;
+  right: 50px;
+  display: grid;
+  gap: 100px;
+	animation:float 10s linear infinite;
+}@media (max-width: 1290px) {
+	
+  .aboutus-left-icons{
+   display: none;
+  }
+  .aboutus-right-icons{
+   display: none;
+	
+  }}

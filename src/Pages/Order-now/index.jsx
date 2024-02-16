@@ -2,16 +2,38 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
-import "./style.css"; 
-import { removeFromOrders } from '../../redux/actions/actions';
+import "./style.css";
+import { decreaseItemCount, increaseItemCount, removeFromOrders } from '../../redux/actions/actions';
 import Modal from '../Modals/Confirm';
 import SuccesModal from '../Modals/SuccesOrder';
 import ReactEmoji from 'react-emoji-render';
+import { Link } from 'react-router-dom';
 
 const Orders = () => {
+  const theOrders = useSelector(state => state.theOrders);
+  const dispatch = useDispatch();
+
+  const handleDecrease = (itemId) => {
+    dispatch(decreaseItemCount(itemId));
+    
+  };
+
+  const handleIncrease = (itemId) => {
+    dispatch(increaseItemCount(itemId));
+    console.log(itemId)
+  };
+
+  const [theCardDetails, settheCardDetails] = useState(false);
+
+  const handleThePaymentMethodChange = (e) => {
+    setPaymentMethod(e.target.value);
+    setShowCardDetails(e.target.value === 'creditCard');
+    setPaymentError(false);
+  };
+
   const orders = useSelector(state => state.orders);
   const dis = useDispatch();
-  
+
   const [modalOpened, setModalOpened] = useState(false);
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -20,8 +42,8 @@ const Orders = () => {
   const [cardNumber, setCardNumber] = useState('');
   const [expiryDate, setExpiryDate] = useState('');
   const [cvv, setCvv] = useState('');
-  const [paymentMethod, setPaymentMethod] = useState(''); 
-  const [showCardDetails, setShowCardDetails] = useState(false); 
+  const [paymentMethod, setPaymentMethod] = useState('');
+  const [showCardDetails, setShowCardDetails] = useState(false);
   const [succesed, setSuccesed] = useState(false);
   const [paymentError, setPaymentError] = useState(false);
   const [thankYouModalOpened, setThankYouModalOpened] = useState(false);
@@ -36,7 +58,7 @@ const Orders = () => {
 
   const handlePaymentMethodChange = (e) => {
     setPaymentMethod(e.target.value);
-    setShowCardDetails(e.target.value === 'creditCard'); 
+    setShowCardDetails(e.target.value === 'creditCard');
     setPaymentError(false);
   };
 
@@ -48,7 +70,12 @@ const Orders = () => {
     setSuccesed(false);
     modalClosed();
   };
+  const [accordionOpen, setAccordionOpen] = useState(false);
 
+
+  const handleAccordionToggle = () => {
+    setAccordionOpen(!accordionOpen);
+  };
   const handleSubmit = () => {
     let formIsValid = true;
 
@@ -59,13 +86,7 @@ const Orders = () => {
       document.getElementById('firstName').style.border = '';
     }
 
-    if (lastName === '') {
-      formIsValid = false;
-      document.getElementById('lastName').style.border = '1px solid red';
-    } else {
-      document.getElementById('lastName').style.border = '';
-    }
-
+   
     if (phoneNumber === '') {
       formIsValid = false;
       document.getElementById('phoneNumber').style.border = '1px solid red';
@@ -80,7 +101,7 @@ const Orders = () => {
       document.getElementById('address').style.border = '';
     }
 
-    if (showCardDetails) {
+    if (paymentMethod) {
       if (cardNumber === '') {
         formIsValid = false;
         document.getElementById('cardNumber').style.border = '1px solid red';
@@ -114,9 +135,10 @@ const Orders = () => {
       modalSucces();
     }
   };
-
   return (
     <div>
+         {orders.length > 0 ? (
+          <>
       <h1 className='categoryname-orders'>Your Orders</h1>
       <div className='container-orders'>
         {orders.map(item => (
@@ -124,93 +146,94 @@ const Orders = () => {
             <div className='card-orders'>
               <div className='baseline'>
                 <h2 className='item-name-orders'>{item.name}</h2>
-                <img width={'200px'} src={item.image} alt={item.name} />
+                <img width={'200px'}  src={item.image} alt={item.name} />
               </div>
-              <p className='description-orders'>{item.description}</p>
-              <span className='order-count'></span>
-              <button className='price-orders'>{item.price} $</button>
+             <div className='left-side-orders'>
+             <div className="actions">
+             <button onClick={() => handleDecrease(item.id)}>-</button>
+              <span className='order-count'>{item.count}</span>
+             <button onClick={() => handleIncrease(item.id)}>+</button>
+             </div>
+              <button className='price-orders'>{item.price*item.count} $</button>
+              </div>
               <span className='trash-icon' onClick={() => dis(removeFromOrders(item.id))}>
                 <FontAwesomeIcon
                   icon={faTrashAlt}
                   style={{
-                    position: 'absolute',
-                    top: '0',
-                    right: '0',
+                   
                     color: 'red',
                     fontSize: '2em',
                   }}
                 />
               </span>
             </div>
+            <hr />
           </div>
+          
         ))}
       </div>
-      
-      <button className='confirm-cart' onClick={modalOpen} style={{ textDecoration: 'none', color: '#ffffff' }}>
+      <button className='confirm-cart' onClick={handleAccordionToggle} style={{ textDecoration: 'none', color: '#ffffff' }}>
         Confirm Cart
       </button>
-      
-      {modalOpened && (
-        <Modal close={modalClosed}>
-          <div className="order-form">
-            <label htmlFor="firstName">Name:</label>
-            <input type="text" id="firstName" name="firstName" className="required-input" value={firstName} onChange={(e) => setFirstName(e.target.value)} required />
 
-            <label htmlFor="lastName">Surname:</label>
-            <input type="text" id="lastName" name="lastName" className="required-input" value={lastName} onChange={(e) => setLastName(e.target.value)} required />
+      {accordionOpen && (
+        <div className="accordion-content">
+          <div className="order-form">
+            <label htmlFor="firstName">First Name:</label>
+            <input type="text" id="firstName" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
 
             <label htmlFor="phoneNumber">Phone Number:</label>
-            <input type="tel" id="phoneNumber" name="phoneNumber" className="required-input" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} required />
+            <input type="tel" id="phoneNumber" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
 
-            <label htmlFor="address">Adres:</label>
-            <textarea id="address" name="address" rows="4" required className="required-input" value={address} onChange={(e) => setAddress(e.target.value)}></textarea>
-            
+            <label htmlFor="address">Address:</label>
+            <textarea id="address" rows="4" value={address} onChange={(e) => setAddress(e.target.value)}></textarea>
+
             <label>Payment Method:</label>
-            <div className="payment-options">
-              <div className="payment-option">
-                <input type="radio" id="creditCard" name="paymentMethod" value="creditCard" onChange={handlePaymentMethodChange} />
+            <div className="methodOfPay">
+              <div>
                 <label htmlFor="creditCard">Credit Card Payment</label>
+                <input type="radio" id="creditCard" name="paymentMethod" value="creditCard" onChange={(e) => handleThePaymentMethodChange(e)} />
               </div>
 
-              <div className="payment-option">
-                <input type="radio" id="cashOnDelivery" name="paymentMethod" value="cashOnDelivery" onChange={handlePaymentMethodChange} />
+              <div>
                 <label htmlFor="cashOnDelivery">Cash on Delivery</label>
+                <input type="radio" id="cashOnDelivery" name="paymentMethod" value="cashOnDelivery" onChange={(e) => handleThePaymentMethodChange(e)} />
               </div>
             </div>
 
-            {showCardDetails && (
+            {paymentMethod === 'creditCard' && (
               <div className="credit-card-details">
                 <label htmlFor="cardNumber">Card Number:</label>
-                <input type="text" id="cardNumber" name="cardNumber" value={cardNumber} onChange={(e) => setCardNumber(e.target.value)} />
+                <input type="text" id="cardNumber" value={cardNumber} onChange={(e) => setCardNumber(e.target.value)} />
 
                 <label htmlFor="expiryDate">Expiration Date:</label>
-                <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" value={expiryDate} onChange={(e) => setExpiryDate(e.target.value)} />
+                <input type="text" id="expiryDate" value={expiryDate} onChange={(e) => setExpiryDate(e.target.value)} />
 
                 <label htmlFor="cvv">CVV:</label>
-                <input type="text" id="cvv" name="cvv" value={cvv} onChange={(e) => setCvv(e.target.value)} />
+                <input type="text" id="cvv" value={cvv} onChange={(e) => setCvv(e.target.value)} />
               </div>
             )}
 
-           
-
-            {paymentError && (
-              <p className="error-message"> * Please select a payment method.</p>
-            )}
-
-            <p className="error-message"> * Please fill out all required fields. We'll contact you using the provided phone number in case of any issues.</p>
-
-            <button className="confirm-cart" onClick={handleSubmit} style={{ textDecoration: 'none', color: '#ffffff' }}>
-              Finish Order
-            </button>
+            <button onClick={handleSubmit}>Submit Order</button>
           </div>
-        </Modal>
+        </div>
       )}
 
       {succesed && (
-        <SuccesModal close={modalok}>
+        <SuccesModal>
           Thank you for your order!
-            <ReactEmoji text="😊" className="smiling-face" />
+          <ReactEmoji text="😊" className="smiling-face" />
         </SuccesModal>
+      )}   </>
+      ) : (
+        <div className='choose-your-fav'>
+          <h2>Start Order</h2>
+          <button className='go-to-menu' >
+            <Link to='/menu' style={{ textDecoration: 'none', color: '#ffffff' }}>
+             <p> Go To Menu</p>
+            </Link>
+          </button>
+        </div>
       )}
     </div>
   );

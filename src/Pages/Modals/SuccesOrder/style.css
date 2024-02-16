@@ -1,36 +1,27 @@
-.succes-container {
-  display: flex;
+.succes-modal-container {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.023);
+  bottom: 0;
+  left: 40%; 
+  margin: 10px; 
+  z-index: 2;
+  background-color: red;
+  text-decoration: none;
+  animation: slideIn 1.5s forwards; 
 }
 
 .succes-modal {
-  background:linear-gradient(45deg, #ff6600, #ffcc00);
-  padding: 5px;
-  border-radius: 8px;
-  height: 80px;
-  width: 250px;
-  position: relative;
+  color: black;
+  border: 2px solid red;
+  border-radius: 15px;
+  width: 250px; 
+  line-height: 32px;
 }
 
-.succes-close-modal{
-  position: absolute;
-  bottom: 5%;
-  right: 42%;
-  background: none;
-  border: 3px solid #ff6600;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 1.2em;
-  color: #333;
-  margin: 0 auto;
-}
-.succes-close-modal:hover{
-  box-shadow: inset 1px 1px 10px #ff6600;
+@keyframes slideIn {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(5%);
+  }
 }
