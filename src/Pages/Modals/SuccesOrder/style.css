@@ -1,7 +1,7 @@
-.succes-modal-container {
+.success-modal-container {
   position: fixed;
   bottom: 0;
-  left: 40%; 
+  left: 0; 
   margin: 10px; 
   z-index: 2;
   background-color: red;
@@ -9,7 +9,7 @@
   animation: slideIn 1.5s forwards; 
 }
 
-.succes-modal {
+.success-modal {
   color: black;
   border: 2px solid red;
   border-radius: 15px;
@@ -19,7 +19,7 @@
 
 @keyframes slideIn {
   from {
-    transform: translateX(0);
+    transform: translateX(0); 
   }
   to {
     transform: translateX(5%);

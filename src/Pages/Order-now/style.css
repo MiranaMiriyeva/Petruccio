@@ -223,6 +223,7 @@
   display: flex;
   justify-content: end;
   align-items: end;
+  margin: 20px 0;
 }
 .total-price h1{
   color: green;
@@ -233,6 +234,7 @@
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 25px;
   text-decoration: underline;
+ 
 }
 @media screen and (max-width: 1000px) {
   .container-orders {

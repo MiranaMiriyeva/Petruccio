@@ -65,11 +65,11 @@
   }
   
   .categoryname {
-    padding: 15px;
-    border: 2px solid #333;
+    padding: 15px 0 50px 0;
     color: red;
     text-shadow: 1px 1px 1px #333;
     margin: 10px 0;
+    font-size: 40px;
   }
   
    .price {

@@ -4,10 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import "./style.css";
 import { decreaseItemCount, increaseItemCount, removeFromOrders } from '../../redux/actions/actions';
-import Modal from '../Modals/Confirm';
-import SuccesModal from '../Modals/SuccesOrder';
 import ReactEmoji from 'react-emoji-render';
 import { Link } from 'react-router-dom';
+import SuccessModal from '../Modals/SuccesOrder';
 
 const Orders = () => {
 
@@ -47,6 +46,7 @@ const Orders = () => {
   const [succesed, setSuccesed] = useState(false);
   const [paymentError, setPaymentError] = useState(false);
   const [thankYouModalOpened, setThankYouModalOpened] = useState(false);
+  const cashOnDelivery = document.getElementById("cashOnDelivery")
 
   const modalOpen = () => {
     setModalOpened(true);
@@ -78,44 +78,43 @@ const Orders = () => {
   };
   const handleSubmit = () => {
     let formIsValid = true;
-
+  
     if (firstName === '') {
       formIsValid = false;
       document.getElementById('firstName').style.border = '1px solid red';
     } else {
       document.getElementById('firstName').style.border = '';
     }
-
-   
+  
     if (phoneNumber === '') {
       formIsValid = false;
       document.getElementById('phoneNumber').style.border = '1px solid red';
     } else {
       document.getElementById('phoneNumber').style.border = '';
     }
-
+  
     if (address === '') {
       formIsValid = false;
       document.getElementById('address').style.border = '1px solid red';
     } else {
       document.getElementById('address').style.border = '';
     }
-
-    if (paymentMethod) {
+  
+    if (paymentMethod === 'creditCard') {
       if (cardNumber === '') {
         formIsValid = false;
         document.getElementById('cardNumber').style.border = '1px solid red';
       } else {
         document.getElementById('cardNumber').style.border = '';
       }
-
+  
       if (expiryDate === '') {
         formIsValid = false;
         document.getElementById('expiryDate').style.border = '1px solid red';
       } else {
         document.getElementById('expiryDate').style.border = '';
       }
-
+  
       if (cvv === '') {
         formIsValid = false;
         document.getElementById('cvv').style.border = '1px solid red';
@@ -123,18 +122,19 @@ const Orders = () => {
         document.getElementById('cvv').style.border = '';
       }
     }
-
+  
     if (paymentMethod === '') {
       formIsValid = false;
       setPaymentError(true);
     } else {
       setPaymentError(false);
     }
-
+  
     if (formIsValid) {
       modalSucces();
     }
   };
+  
   
   let totalPrice = 0;
   orders.forEach(item => {
@@ -231,10 +231,10 @@ const Orders = () => {
       )}
 
       {succesed && (
-        <SuccesModal>
+        <SuccessModal>
           Thank you for your order!
           <ReactEmoji text="😊" className="smiling-face" />
-        </SuccesModal>
+        </SuccessModal>
       )}   </>
       ) : (
         <div className='choose-your-fav'>

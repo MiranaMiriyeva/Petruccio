@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import "./style.css"
-const SuccesModal = ({ close, children }) => {
+const SuccessModal = ({ close, children }) => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       close();
@@ -9,8 +9,8 @@ const SuccesModal = ({ close, children }) => {
     return () => clearTimeout(timeout);
   }, [close]);
   return (
-    <div className='succes-container'>
-      <div className='succes-modal'>
+    <div className='success-container'>
+      <div className='success-modal'>
         {children}
         
        
@@ -19,4 +19,4 @@ const SuccesModal = ({ close, children }) => {
   );
 };
 
-export default SuccesModal;
+export default SuccessModal;
