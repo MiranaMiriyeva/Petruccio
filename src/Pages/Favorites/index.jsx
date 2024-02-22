@@ -5,7 +5,7 @@ import { faHeart as faHeartSolid, faShoppingCart } from '@fortawesome/free-solid
 import "./style.css"; 
 import { addToOrders, removeFromFavorites } from '../../redux/actions/actions';
 import { Link } from 'react-router-dom';
-import Modal from '../Modals/Confirm';
+import Modal from '../Modals/AddedToOrder';
 
 export const Favorites = () => {
    const favorites = useSelector(state => state.favorites);

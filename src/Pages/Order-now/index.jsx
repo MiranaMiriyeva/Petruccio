@@ -10,6 +10,7 @@ import ReactEmoji from 'react-emoji-render';
 import { Link } from 'react-router-dom';
 
 const Orders = () => {
+
   const theOrders = useSelector(state => state.theOrders);
   const dispatch = useDispatch();
 
@@ -20,7 +21,6 @@ const Orders = () => {
 
   const handleIncrease = (itemId) => {
     dispatch(increaseItemCount(itemId));
-    console.log(itemId)
   };
 
   const [theCardDetails, settheCardDetails] = useState(false);
@@ -135,6 +135,11 @@ const Orders = () => {
       modalSucces();
     }
   };
+  
+  let totalPrice = 0;
+  orders.forEach(item => {
+    totalPrice += item.price * item.count;
+  });
   return (
     <div>
          {orders.length > 0 ? (
@@ -171,6 +176,12 @@ const Orders = () => {
           </div>
           
         ))}
+        <div className='total-price'>
+          <h1>Total price: </h1>
+          <br />
+          <p>{totalPrice}$</p>
+        </div>
+        
       </div>
       <button className='confirm-cart' onClick={handleAccordionToggle} style={{ textDecoration: 'none', color: '#ffffff' }}>
         Confirm Cart

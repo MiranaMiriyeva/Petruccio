@@ -219,6 +219,21 @@
   color: red;
   margin-bottom: 16px;
 }
+.total-price{
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+.total-price h1{
+  color: green;
+  text-shadow: 1px 1px 1px#000;
+  margin: 5px 15px 0 5px;
+}
+.total-price p{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 25px;
+  text-decoration: underline;
+}
 @media screen and (max-width: 1000px) {
   .container-orders {
     margin: 40px 10%;
