@@ -478,16 +478,18 @@ color: #ff9100;
 		font-size: 20px;
 	}
 	.content-burger h3{
-		padding-top: 5rem;
+		padding-top: 6rem;
 		
 	}
 	.gallery{
 		align-items: center;
 	}
-	.box-container-review{
+	.box-review{
+		width: 300px;
+	}
+	.about{
 		display: flex;
-		flex-direction: row;
-		width: 600px;
+		flex-direction: column;
 	}
   }
  

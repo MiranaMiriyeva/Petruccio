@@ -17,6 +17,9 @@ header{
 	font-weight: 700;
 	color: var(--text-color);
 }
+.logo img{
+	height: 100px;
+}
 
 .navbar{
 	display: flex;
@@ -82,7 +85,8 @@ header{
 	#menu-icon {
 	  display: none;
 	}
-	.logo{
-		margin-right: 10px;
+	.logo img{
+		height: 60px;
+		padding-right: 10px;
 	}
   }
