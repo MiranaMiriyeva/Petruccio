@@ -36,7 +36,7 @@ section{
 	gap: 2rem;
 }
 .home-img img{
-	width: 100%;
+	width: 1000px;
 	height: auto;
 }
 .home-text h1{
@@ -139,7 +139,7 @@ color: #ff6600;
 	column-gap: 2rem;
   display: flex;
 	margin: auto;
-  border:1rem solid #fff;
+  border:0.5rem solid #fff;
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
   border-radius: .5rem;
   position: relative;
@@ -164,7 +164,6 @@ color: #ff6600;
   bottom: 0;
   clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
   padding: 2rem;
-  padding-top: 4rem;
   text-transform: capitalize;
   transition:all .2s linear;
   
@@ -173,6 +172,9 @@ color: #ff6600;
   font-size: 1rem;
   margin: 5px;
 }
+.main-gallery-box .box-gallery .content-gallery img{
+    width: 80px;
+  }
 .main-gallery-box .box-gallery .content-gallery p{
   font-size: 1rem;
   margin:5px;
@@ -259,6 +261,9 @@ color: #ff9100;
 	margin-top: 10px;
   display: flex;
   flex-direction: column;
+}
+.container-img img{
+	width: 100px;
 }
 .main-text{
 	display: flex;

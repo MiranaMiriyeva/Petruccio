@@ -34,13 +34,13 @@ const Home = () => {
             <Link className='btn' to='/menu'>Choose A Pizza</Link>
           </div>
           <div className="home-img">
-            <img src="img/home.png" alt="home" />
+            <img  src="https://simbapizza.am/cache/1677643035.jpg" alt="home" />
           </div>
         </section>
       </>
       <section id="home-burger" className="home-burger">
   <div className="image myimage-burger">
-    <img  src="src/images/home-img.png" alt="" />
+    <img  src="https://pngfile.net/download/bbPW45U2DUdrX1HEdkTUkhn5xfCiFQnLYxDIdsloGO9UveIwmfOwMGiWFU0Nqcc16pmt1vGVMY1gUfwwjTHp1oBBDAY1x3LmgNGbRZ8sL68zmYEec4XtPYpGmmg3umA0JV9uTN6e3GboOw8GXgjQOd6lrjALuBAmLKaq2BgMyETZ1JiWTygqwoOT1BpBa1pvhF3QIHyi/medium" alt="" />
   </div>
   <div className="content-burger">
     <h3>food made with love</h3>
@@ -55,21 +55,11 @@ const Home = () => {
     <span>Our</span> Gallery{" "}
   </h1>
   <div className="main-gallery-box">
+
     <div className="box-gallery">
-      <img className="image-gallery" src="https://www.mashed.com/img/gallery/delicious-homemade-sauces-that-will-upgrade-any-meal/intro-1615237740.jpg" alt="" />
+      <img className="image-gallery" src="https://www.paulinacocina.net/wp-content/uploads/2023/09/pizza-margherita-paulina-cocina-recetas.jpg" alt="" />
       <div className="content-gallery">
-        <img src="src/images/s-1.png" alt="" />
-        <h3>special sauces</h3>
-        <p>
-        Experience our special sauces, created with unique blends of spices.
-        Enhance your dishes with our sauces, carefully crafted to elevate flavors.
-        </p>
-      </div>
-    </div>
-    <div className="box-gallery">
-      <img className="image-gallery" src="src/images/s-img-2.jpg" alt="" />
-      <div className="content-gallery">
-        <img src="src/images/s-1.png" alt="" />
+        <img src="https://t3.ftcdn.net/jpg/02/36/03/66/360_F_236036622_ctUjaJTkIANvk9pJh0s5ZJRDWbM8ggT9.jpg" alt="" />
         <h3>flavorful pizza</h3>
         <p>
           Our flavorful pizza made with the finest ingredients ensures a taste sensation.
@@ -77,21 +67,11 @@ const Home = () => {
         </p>
       </div>
     </div>
+
     <div className="box-gallery">
-      <img className="image-gallery" src="src/images/s-img-3.jpg" alt="" />
+      <img className="image-gallery" src="https://bloximages.newyork1.vip.townnews.com/bakersfield.com/content/tncms/assets/v3/editorial/4/db/4db87e46-91eb-11e8-955c-77632055da21/5b5b9b4e1f291.image.jpg?resize=1200%2C800" alt="" />
       <div className="content-gallery">
-        <img src="src/images/s-1.png" alt="" />
-        <h3>yummy sweets</h3>
-        <p>
-        Indulge in our yummy sweets, ranging from cakes to cookies.
-        Treat yourself to our sweets, perfect for satisfying your cravings.
-        </p>
-      </div>
-    </div>
-    <div className="box-gallery">
-      <img className="image-gallery" src="src/images/s-img-4.jpg" alt="" />
-      <div className="content-gallery">
-        <img src="src/images/s-1.png" alt="" />
+        <img src="https://t3.ftcdn.net/jpg/02/36/03/66/360_F_236036622_ctUjaJTkIANvk9pJh0s5ZJRDWbM8ggT9.jpg" alt="" />
         <h3>handmade lemonades</h3>
         <p>
         Quench your thirst with our refreshing handmade lemonades.
@@ -102,7 +82,7 @@ const Home = () => {
     <div className="box-gallery">
       <img className="image-gallery" src="https://b.zmtcdn.com/data/pictures/2/20486902/a0f880a8f6e81db444d9a5e71c412df4.jpg?fit=around|960:500&crop=960:500;*,*" alt="" />
       <div className="content-gallery">
-        <img src="src/images/s-1.png" alt="" />
+        <img src="https://t3.ftcdn.net/jpg/02/36/03/66/360_F_236036622_ctUjaJTkIANvk9pJh0s5ZJRDWbM8ggT9.jpg" alt="" />
         <h3>tasty burger</h3>
         <p>
         Quench your thirst with our refreshing handmade lemonades.
@@ -113,7 +93,7 @@ const Home = () => {
     <div className="box-gallery">
       <img className="image-gallery" src="https://media.istockphoto.com/id/537703317/tr/foto%C4%9Fraf/chicken-nuggets-with-ketchup.jpg?s=170667a&w=0&k=20&c=hx3t8-iWsJFfqIo5Fsy1aPuUa_3XTX5uyURelEa0vQE=" alt="" />
       <div className="content-gallery">
-        <img src="src/images/s-1.png" alt="" />
+        <img src="https://t3.ftcdn.net/jpg/02/36/03/66/360_F_236036622_ctUjaJTkIANvk9pJh0s5ZJRDWbM8ggT9.jpg" alt="" />
         <h3>delicate sides</h3>
         <p>
         Explore our delicate sides, designed to complement your main course.
@@ -121,8 +101,42 @@ const Home = () => {
         </p>
       </div>
     </div>
+    <div className="box-gallery">
+      <img className="image-gallery" src="https://media-assets.swiggy.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/rhoaiclqj1rrhfxnln5y" alt="" />
+      <div className="content-gallery">
+        <img src="https://t3.ftcdn.net/jpg/02/36/03/66/360_F_236036622_ctUjaJTkIANvk9pJh0s5ZJRDWbM8ggT9.jpg" alt="" />
+        <h3>hot shawarma</h3>
+        <p>
+        Explore our delicate sides, designed to complement your main course.
+        Complete your meal with our sides, prepared with care to enhance flavors.
+        </p>
+      </div>
+    </div>
+    {/* <div className="box-gallery">
+      <img className="image-gallery" src="https://img.freepik.com/free-photo/homemade-ketchup-mustard-mayonnaise-sauce_114579-53041.jpg" alt="" />
+      <div className="content-gallery">
+        <img src="src/images/s-1.png" alt="" />
+        <h3>special sauces</h3>
+        <p>
+        Experience our special sauces, created with unique blends of spices.
+        Enhance your dishes with our sauces, carefully crafted to elevate flavors.
+        </p>
+      </div>
+    </div> */}
+    <div className="box-gallery">
+      <img className="image-gallery" src="https://www.restaurant-hospitality.com/sites/restaurant-hospitality.com/files/styles/article_featured_retina/public/uploads/2015/02/red-velvet.jpg?itok=RbLT1RCt" alt="" />
+      <div className="content-gallery">
+        <img src="https://t3.ftcdn.net/jpg/02/36/03/66/360_F_236036622_ctUjaJTkIANvk9pJh0s5ZJRDWbM8ggT9.jpg" alt="" />
+        <h3>yummy sweets</h3>
+        <p>
+        Indulge in our yummy sweets, ranging from cakes to cookies.
+        Treat yourself to our sweets, perfect for satisfying your cravings.
+        </p>
+      </div>
+    </div>
   </div>
 </section>
+
 
 
 
@@ -138,7 +152,7 @@ const Home = () => {
           <div className="container-box">
             <div className="c-mainbox">
               <div className="container-img">
-                <img src="img/b1.png" alt="box1" />
+                <img src="https://pngimg.com/d/dough_PNG17.png" alt="box1" />
               </div>
               <div className="container-text">
                 <p>Delicate Dough</p>
@@ -146,7 +160,7 @@ const Home = () => {
             </div>
             <div className="c-mainbox">
               <div className="container-img">
-                <img src="img/b2.png" alt="box2" />
+                <img src="https://freepngimg.com/save/17363-tomato-png-image/345x225" alt="box2" />
               </div>
               <div className="container-text">
                 <p>Organic Tomatoes</p>
@@ -154,7 +168,7 @@ const Home = () => {
             </div>
             <div className="c-mainbox">
               <div className="container-img">
-                <img src="img/b3.png" alt="box3" />
+                <img src="https://t3.ftcdn.net/jpg/03/27/31/56/360_F_327315656_xVG2OaOJfq5R0abiwGrcIaJz6DicSFjG.jpg" alt="box3" />
               </div>
               <div className="container-text">
                 <p>Alpine Cheese</p>
@@ -162,7 +176,7 @@ const Home = () => {
             </div>
             <div className="c-mainbox">
               <div className="container-img">
-                <img src="img/b4.png" alt="box4" />
+                <img src="https://pngimg.com/uploads/sausage/sausage_PNG98741.png" alt="box4" />
               </div>
               <div className="container-text">
                 <p>Italian Sausage</p>
@@ -191,7 +205,7 @@ const Home = () => {
      
         <section className="about" id="about">
           <div className="about-img">
-            <img src="img/a.png" alt="" />
+            <img src="https://img.freepik.com/premium-photo/pizza-isolate-white-background-generative-ai_74760-2619.jpg" alt="" />
           </div>
           <div className="about-text">
             <h2>
@@ -219,7 +233,7 @@ const Home = () => {
     </h1>
     <div className="box-container-review">
       <div className="box-review">
-        <img src="src/images/pic1.png" alt="" />
+        <img src="https://reductress.com/wp-content/uploads/2019/06/petite-woman-1-820x500.jpg" alt="" />
         <h3>Sarah Taylor</h3>
         <div className="stars">
       <FontAwesomeIcon icon={fasStar} />
@@ -233,7 +247,7 @@ const Home = () => {
         </p>
       </div>
       <div className="box-review">
-        <img src="src/images/pic2.png" alt="" />
+        <img src="https://t4.ftcdn.net/jpg/04/56/51/91/360_F_456519184_CDS9Trh77ukgYikJ7WwxjIj8z0ylOdG2.jpg" alt="" />
         <h3>john deo</h3>
         <div className="stars">
       <FontAwesomeIcon icon={fasStar} />
@@ -247,7 +261,7 @@ const Home = () => {
         </p>
       </div>
       <div className="box-review">
-        <img src="src/images/pic3.png" alt="" />
+        <img src="https://techgirlsglobal.org/wp-content/uploads/2023/01/79F8E534-17E4-47A6-88A0-8B9D19811879-%E5%BC%B5%E6%81%A9%E6%85%88-Grace-Chang.jpg" alt="" />
         <h3>Lee Hye-jin</h3>
         <div className="stars">
       <FontAwesomeIcon icon={fasStar} />

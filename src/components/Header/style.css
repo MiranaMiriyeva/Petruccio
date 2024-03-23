@@ -9,7 +9,7 @@ header{
 	align-items: center;
 	justify-content: space-between;
 	background: #fff;
-	padding: 20px 15%;
+	padding: 0 15%;
 	transition: all .38s ease;
 }
 .logo{
