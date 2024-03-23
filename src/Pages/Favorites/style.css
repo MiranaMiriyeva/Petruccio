@@ -150,12 +150,21 @@ left: 0;
 @media (max-width: 900px) {
   .container-favorite {
     margin: 0 10px;
+    
+    display: flex;
+    flex-direction: column;
+   
   }
   .categoryname-favorite{
     margin: 150px 10px 0 10px;
   }
   .card-favorite {
-    width: calc(100% - 20px);
+    width: calc(50% - 20px);
+    width: 400px;
+  
+  }
+  .description-favorite {
+    height: 100px;
   }
   .price-favorite{
     margin-bottom: 0;
