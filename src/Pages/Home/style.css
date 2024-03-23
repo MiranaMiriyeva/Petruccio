@@ -451,7 +451,7 @@ color: #ff9100;
 	}
 }
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
 	.home {
 	  grid-template-columns: 1fr;
 	  gap: 1rem; 
@@ -475,11 +475,13 @@ color: #ff9100;
 		padding: 10px;
 	}
 	.content-burger p{
-		font-size: 20px;
+		font-size: 30px;
+		width: 400px;
 	}
 	.content-burger h3{
 		padding-top: 250px;
-		
+		margin: 10px;
+		padding: 10px;
 	}
 	.gallery{
 		align-items: center;
