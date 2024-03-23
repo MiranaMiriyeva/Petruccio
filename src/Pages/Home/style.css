@@ -451,7 +451,7 @@ color: #ff9100;
 	}
 }
 
-@media (max-width: 700px) {
+@media (max-width: 576px) {
 	.home {
 	  grid-template-columns: 1fr;
 	  gap: 1rem; 
@@ -502,7 +502,7 @@ color: #ff9100;
 	}
   }
  
-  @media (min-width: 701px) and (max-width: 1290px) {
+  @media (min-width: 577px) and (max-width: 1290px) {
 	.home {
 	  grid-template-columns: repeat(2, calc(50% - 1rem)); 
 	  gap: 1rem; 
