@@ -11,7 +11,7 @@ const Header = () => {
   
   return (
     <div>
-      <header>
+      <header className='header'>
         <a href="#" className="logo">
           <img  src="https://d3q0fpse3wbo5h.cloudfront.net/production/uploads/innovations/a56ad223cc8c22677ab3df8350440ba7.jpg" alt="logo" />
         </a>
@@ -23,7 +23,7 @@ const Header = () => {
             Order
             {orders.length > 0 && <span className="order-count-header">{orders.length}</span>}
           </Link>
-          <Link to='/aboutus'>About Us</Link>
+          <Link className='about-us' to='/aboutus'>About Us</Link>
           <div className="bx bx-menu" id="menu-icon" />
         </div>
       </header>

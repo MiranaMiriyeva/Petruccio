@@ -467,6 +467,12 @@ color: #ff9100;
 	  max-width: 100%; 
 	  
 	}
+	.home-text h1{
+		font-size: 18px;
+	}
+	.home-text p{
+		font-size: 16px;
+	}
 	.home-burger .image img{
       display: none;
 	  }
@@ -478,6 +484,7 @@ color: #ff9100;
 	.content-burger h3{
 		margin-top: 200px;
 		padding: 10px;
+		font-size: 20px;
 	}
 	.gallery{
 		align-items: center;
@@ -500,6 +507,10 @@ color: #ff9100;
 		right: 0;
 	  border-radius: 5rem;
 	}
+	.home-burger .content-burger{
+		margin: auto;
+		padding: 20px;
+	  }
   }
  
   @media (min-width: 577px) and (max-width: 1290px) {

@@ -67,7 +67,7 @@ header{
 	font-size: 14px;
 	font-weight: bold;
   }
-@media (max-width: 900px) {
+@media  (min-width: 577px) and  (max-width: 900px) {
 	.navbar {
 		display: grid;
 	  position: relative;
@@ -82,6 +82,35 @@ header{
 	  border-bottom: 2px solid transparent;
 	}
   
+	#menu-icon {
+	  display: none;
+	}
+	.logo img{
+		height: 60px;
+		padding-right: 10px;
+	}
+  }
+  @media (max-width: 476px) {
+	
+	header{
+		display: flex;
+		flex-direction: column;
+	}
+	.navbar {
+		display: grid;
+	  position: relative;
+	  grid-template-columns: repeat(5, 3fr); 
+	  gap: 20px;
+	}
+  
+	.navbar a {
+	  display: block;
+	  padding: 10px 0; 
+	  margin: 5px 0; 
+	  border-bottom: 2px solid transparent;
+	  display: flex;
+	}
+
 	#menu-icon {
 	  display: none;
 	}
