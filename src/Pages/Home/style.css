@@ -515,10 +515,13 @@ color: #ff9100;
 	  .box-container-review{
 		display: flex;
 		align-items: center;
+		
+		margin: auto;
 	  }
 	  .main-gallery-box{
 		display: flex;
 		align-items: center;
+		margin: auto;
 	  }
   }
  
