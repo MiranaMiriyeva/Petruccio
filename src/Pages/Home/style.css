@@ -512,6 +512,14 @@ color: #ff9100;
 		padding: 20px;
 		padding-top: 1rem;
 	  }
+	  .box-container-review{
+		display: flex;
+		align-items: center;
+	  }
+	  .main-gallery-box{
+		display: flex;
+		align-items: center;
+	  }
   }
  
   @media (min-width: 577px) and (max-width: 1290px) {
