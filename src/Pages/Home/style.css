@@ -482,7 +482,7 @@ color: #ff9100;
 
 	}
 	.content-burger h3{
-		margin-top: 200px;
+		margin-top: 100px;
 		padding: 10px;
 		font-size: 20px;
 	}
@@ -510,6 +510,7 @@ color: #ff9100;
 	.home-burger .content-burger{
 		margin: auto;
 		padding: 20px;
+		padding-top: 1rem;
 	  }
   }
  
