@@ -43,7 +43,7 @@ const Home = () => {
     <img  src="https://pngfile.net/download/bbPW45U2DUdrX1HEdkTUkhn5xfCiFQnLYxDIdsloGO9UveIwmfOwMGiWFU0Nqcc16pmt1vGVMY1gUfwwjTHp1oBBDAY1x3LmgNGbRZ8sL68zmYEec4XtPYpGmmg3umA0JV9uTN6e3GboOw8GXgjQOd6lrjALuBAmLKaq2BgMyETZ1JiWTygqwoOT1BpBa1pvhF3QIHyi/medium" alt="" />
   </div>
   <div className="content-burger">
-    <h3>food made with love</h3>
+    <h3 >food made with love</h3>
     <p>
     Indulge in dishes crafted with love. From our kitchen to your plate, every bite tells a story of passion and flavor. Our commitment to quality ingredients and attention to detail ensures a culinary experience that delights the senses.
     </p>
