@@ -81,7 +81,7 @@ header{
 	  margin: 5px 0; 
 	  border-bottom: 2px solid transparent;
 	}
-  
+
 	#menu-icon {
 	  display: none;
 	}
@@ -110,6 +110,10 @@ header{
 	  border-bottom: 2px solid transparent;
 	  display: flex;
 	}
+	.navbar a:active{
+		border-bottom: 2px solid var(--main-color);
+	}
+  
 
 	#menu-icon {
 	  display: none;

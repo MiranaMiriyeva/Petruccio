@@ -23,7 +23,7 @@ const Header = () => {
             Order
             {orders.length > 0 && <span className="order-count-header">{orders.length}</span>}
           </Link>
-          <Link className='about-us' to='/aboutus'>About Us</Link>
+          <Link className='about-us' to='/aboutus'>About</Link>
           <div className="bx bx-menu" id="menu-icon" />
         </div>
       </header>
