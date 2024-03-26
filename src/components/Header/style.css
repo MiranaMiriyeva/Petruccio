@@ -67,7 +67,7 @@ header{
 	font-size: 14px;
 	font-weight: bold;
   }
-@media  (min-width: 577px) and  (max-width: 900px) {
+@media   (max-width: 900px) {
 	.navbar {
 		display: grid;
 	  position: relative;
