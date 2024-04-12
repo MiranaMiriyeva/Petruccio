@@ -4,10 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import { addToFavorites, addToOrders, removeFromFavorites } from '../../redux/actions/actions';
 import { useDispatch, useSelector } from 'react-redux';
-import { faHeart as faHeartSolid, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUp, faHeart as faHeartSolid, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import Modal from '../Modals/AddedToOrder';
 import { data } from '../../Db/Data';
-
+import ScrollReveal from 'scrollreveal';
 
 
 
@@ -105,7 +105,9 @@ const Menu = () => {
     
     {/* scroll top */}
     <a href="#menu" className="scroll-top">
-      <i className="bx bx-up-arrow-alt" />
+    <div style={{ backgroundColor: 'orange', padding: '10px 15px' , borderRadius: '50%'}}>
+      <FontAwesomeIcon icon={faArrowUp} style={{ color: 'white',  backgroundColor: 'orange'}} />
+    </div>
     </a>
   </>
     </div>

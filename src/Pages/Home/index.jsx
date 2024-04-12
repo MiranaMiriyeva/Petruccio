@@ -1,24 +1,22 @@
 import React, {  useEffect}  from 'react';
 import "./style.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar as fasStar, faStar as farStar } from '@fortawesome/free-solid-svg-icons';
+import { faStar as fasStar, faStar as farStar, faArrowAltCircleUp, faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import ScrollReveal from 'scrollreveal';
 
 
 const Home = () => {
   useEffect(() => {
- 
-
     const sr = ScrollReveal ({
       distance: '30px', 
       duration: 2500,
       reset: true
     });
-    sr.reveal('.home-text',{delay:200, origin:'left'});
-    sr.reveal('.home-img',{delay:200, origin:'right'});
-   
+    
+    sr.reveal('.home-text', { delay: 200, origin: 'left' });
+    sr.reveal('.home-img', { delay: 200, origin: 'right' });
   }, []);
-
   return (
     <div>
       <>
@@ -281,7 +279,9 @@ const Home = () => {
     
         {/* scroll top */}
         <a href="#home" className="scroll-top">
-          <i className="bx bx-up-arrow-alt" />
+        <div style={{ backgroundColor: 'orange', padding: '10px 15px' , borderRadius: '50%'}}>
+      <FontAwesomeIcon icon={faArrowUp} style={{ color: 'white',  backgroundColor: 'orange'}} />
+    </div>
         </a>
       </>
     </div>

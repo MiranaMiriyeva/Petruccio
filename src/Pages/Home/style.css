@@ -505,7 +505,7 @@ color: #ff9100;
 		position: fixed;
 		bottom: 2.2rem;
 		right: 0;
-	  border-radius: 5rem;
+	    border-radius: 5rem;  
 	}
 	.home-burger .content-burger{
 		margin: auto;

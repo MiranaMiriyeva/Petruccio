@@ -72,28 +72,28 @@ export const data = [
                 name: 'Margherita',
                 description: 'Pizza sauce, gouda cheese, mozzarella cheese, tomatoes',
                 price: 23,
-                image: 'https://pizzamizza.az/upload/resize_cache/iblock/f87/254_254_2/f87e770b152b9410cf45ac22e788c166.jpg?162750386084708',
+                image: 'https://pizzamizza.az/upload/resize_cache/iblock/0ed/254_254_2/0ed089822bbaafc76d70f1c04dff1342.png?1712401835143577',
             },
             {
                 id: 10,
                 name: "Vegetarian",
                 description: "Pizza Sauce, Chicken Poppers, Mushrooms, Italian Flavoring, Garlic Parmesan Sauce, Mozzarella",
                 price: 24,
-                image: "https://pizzamizza.az/upload/resize_cache/iblock/05c/254_254_2/05c1187c21bea988b38e31089dfec366.jpg?161761730265933g"
+                image: "https://pizzamizza.az/upload/resize_cache/iblock/4ec/254_254_2/4ec54b6414bb28abee260bd829ece236.png?1712401835151478"
             },
             {
                 id: 11,
                 name: "Pepperoni",
                 description: "Ranch Sauce, Grilled Chicken, Mushrooms, Jalapeno, Tomatoes, Mozzarella",
                 price: 21,
-                image: "https://pizzamizza.az/upload/resize_cache/iblock/941/254_254_2/94148858e5b71f3886235000877a1315.png?1705869139153892"
+                image: "https://pizzamizza.az/upload/resize_cache/iblock/cca/254_254_2/cca9977086c1f63027e655ce03699a22.png?1712401836153532"
             },
             {
                 id: 12,
                 name: "Classico",
                 description: "Pizza Sauce, Pepperoni, Jalapeno, Mozzarella",
                 price: 21,
-                image: "https://pizzamizza.az/upload/resize_cache/iblock/e6a/254_254_2/e6a10ca8f8b45597f5ad4d0121a7124c.jpg?161761730268447"
+                image: "https://pizzamizza.az/upload/resize_cache/iblock/f16/254_254_2/f16f0d38244a91cf41756f7e4649aebc.png?1712401835149735"
             },
             {
                 id: 13,
@@ -107,14 +107,14 @@ export const data = [
                 name: "Five Cheese",
                 description: "Pizza Sauce, Tomatoes, Mushrooms, Black Olives, Green Peppers, Jalapeno, Mozzarella",
                 price: 23,
-                image: "https://pizzamizza.az/upload/resize_cache/iblock/48b/254_254_2/48b88633d5cbd7ddf725296af5872e48.jpg?164461282271552"
+                image: "https://pizzamizza.az/upload/resize_cache/iblock/ce9/254_254_2/ce93d9a5f27131d95f35f4b6e20c0573.png?1712401836140467"
             },
             {
                 id: 15,
                 name: "Chicken Stips",
                 description: "Pizza sauce, Pepperoni, Italian Sausage, Mushrooms, Black Olives, Oregano, Mozzarella",
                 price: 25,
-                image: "https://pizzamizza.az/upload/resize_cache/iblock/6f5/254_254_2/6f5d4cdf454946331725eae7b571a6e9.jpg?161761730366485"
+                image: "https://pizzamizza.az/upload/resize_cache/iblock/799/254_254_2/79905cd017431e1fa57b6b809c0ad3b9.png?1712401835148827"
             },
             {
                 id: 16,
@@ -133,14 +133,14 @@ export const data = [
                 name: 'French Fries',
                 description: 'Delicious, deep-fried and slightly salted potato sticks',
                 price: 4,
-                image: 'https://pizzamizza.az/upload/resize_cache/iblock/9a6/254_254_2/9a6ba0a9ea916be2a702491ae257fd2d.jpg?158818803626674',
+                image: 'https://purepng.com/public/uploads/large/purepng.com-friesfrench-friesfriespotatochips-1411527421242qbeh5.png',
             },
             {
                 id: 18,
                 name: "Panini",
                 description: "Gouda cheese, salami or ham  or tuna",
                 price: 6,
-                image: "https://pizzamizza.az/upload/resize_cache/iblock/d3a/254_254_2/d3a56fd4c88e8fe3fb5e62ab2980e1f9.jpg?158818803632725"
+                image: "https://pizzamizza.az/upload/resize_cache/iblock/851/254_254_2/85142c7b9594d3f8efef8b7814abad5b.png?171240221967599"
             },
             {
                 id: 19,
