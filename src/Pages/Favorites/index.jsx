@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart as faHeartSolid, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { faHeart as faHeartSolid } from '@fortawesome/free-solid-svg-icons';
 import "./style.css"; 
 import { addToOrders, removeFromFavorites } from '../../redux/actions/actions';
 import { Link } from 'react-router-dom';
@@ -42,8 +42,8 @@ export const Favorites = () => {
                         icon={faHeartSolid}
                         style={{
                           position: 'absolute',
-                          top: '5px',
-                          right: '5px',
+                          top: '75px',
+                          right: '35px',
                           color: '#ff0000',
                           fontSize: '2.5em',
                         }}
