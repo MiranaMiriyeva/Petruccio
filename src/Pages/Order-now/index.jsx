@@ -195,13 +195,13 @@ const Orders = () => {
         <div className="accordion-content">
           <div className="order-form">
             <label htmlFor="firstName">First Name:</label>
-            <input type="text" id="firstName" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+            <input type="text" id="firstName" placeholder='John' value={firstName} onChange={(e) => setFirstName(e.target.value)} />
 
             <label htmlFor="phoneNumber">Phone Number:</label>
-            <input type="tel" id="phoneNumber" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
+            <input type="tel" id="phoneNumber" placeholder='+555-555-5555' value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
 
             <label htmlFor="address">Address:</label>
-            <textarea id="address" rows="4" value={address} onChange={(e) => setAddress(e.target.value)}></textarea>
+            <textarea id="address" rows="4" placeholder='1234 Elm Street, Apt 5, NY' value={address} onChange={(e) => setAddress(e.target.value)}></textarea>
 
             <label>Payment Method:</label>
             <div className="methodOfPay">
@@ -219,13 +219,13 @@ const Orders = () => {
             {paymentMethod === 'creditCard' && (
               <div className="credit-card-details">
                 <label htmlFor="cardNumber">Card Number:</label>
-                <input type="text" id="cardNumber" value={cardNumber} onChange={(e) => setCardNumber(e.target.value)} />
+                <input type="text" id="cardNumber" placeholder='1234 5678 9012 3456'  value={cardNumber} onChange={(e) => setCardNumber(e.target.value)} />
 
                 <label htmlFor="expiryDate">Expiration Date:</label>
-                <input type="text" id="expiryDate" value={expiryDate} onChange={(e) => setExpiryDate(e.target.value)} />
+                <input type="text" id="expiryDate" placeholder='11/11' value={expiryDate} onChange={(e) => setExpiryDate(e.target.value)} />
 
                 <label htmlFor="cvv">CVV:</label>
-                <input type="text" id="cvv" value={cvv} onChange={(e) => setCvv(e.target.value)} />
+                <input type="text" id="cvv" placeholder='123' value={cvv} onChange={(e) => setCvv(e.target.value)} />
               </div>
             )}
 
