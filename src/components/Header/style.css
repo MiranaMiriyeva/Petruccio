@@ -36,6 +36,9 @@ header{
 .navbar a:hover{
 	border-bottom: 2px solid var(--main-color);
 }
+.navbar a:focus{
+	border-bottom: 2px solid orange;
+}
 .h-icons{
 	display: flex;
 	align-items: center;
@@ -82,6 +85,7 @@ header{
 	  border-bottom: 2px solid transparent;
 	}
 
+  
 	#menu-icon {
 	  display: none;
 	}
@@ -111,7 +115,7 @@ header{
 	  display: flex;
 	}
 	.navbar a:active{
-		border-bottom: 2px solid var(--main-color);
+		border-bottom: 2px solid orange;
 	}
   
 

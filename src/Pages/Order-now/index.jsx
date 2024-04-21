@@ -7,6 +7,7 @@ import { decreaseItemCount, increaseItemCount, removeFromOrders } from '../../re
 import ReactEmoji from 'react-emoji-render';
 import { Link } from 'react-router-dom';
 import SuccessModal from '../Modals/SuccesOrder';
+import Confirm from '../Modals/Confirm';
 
 const Orders = () => {
 
@@ -64,6 +65,9 @@ const Orders = () => {
 
   const modalSucces = () => {
     setSuccesed(true);
+  };
+  const modalConfirmClosed = () => {
+    setSuccesed(false);
   };
 
   const modalok = () => {
@@ -231,10 +235,13 @@ const Orders = () => {
       )}
 
       {succesed && (
-        <SuccessModal>
+        <Confirm close={modalConfirmClosed}>
+          <div className='confirm'>
+          <img className='tick-icon' src="https://static.vecteezy.com/system/resources/previews/010/147/759/non_2x/tick-icon-accept-approve-sign-design-free-png.png" alt="" />
           Thank you for your order!
-          <ReactEmoji text="😊" className="smiling-face" />
-        </SuccessModal>
+          </div>
+          
+        </Confirm>
       )}   </>
       ) : (
         <div className='choose-your-fav'>

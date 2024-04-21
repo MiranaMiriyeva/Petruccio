@@ -1,0 +1,23 @@
+.modal-container-confirm {
+    position: fixed;
+    top: 15%;
+    right: 1%; 
+    margin: auto 10px; 
+    z-index: 2;
+    text-decoration: none;
+    animation: slideInOut 4s forwards; 
+  }
+  
+  
+  
+  @keyframes slideInOut {
+    0% {
+      transform: translateX(-5%); 
+    }
+    70% {
+      transform: translateX(10%); 
+    }
+    100% {
+      transform: translateX(110%); 
+    }
+  }

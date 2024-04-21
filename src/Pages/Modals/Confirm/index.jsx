@@ -1,15 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import "./style.css"
-const Modal = ({ close, children }) => {
+const Confirm = ({ close, children }) => {
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      close();
+    }, 5000);
+
+    return () => clearTimeout(timeout);
+  }, [close]);
   return (
     <div className='modal-container-confirm'>
       <div className='modal-confirm'>
         {children}
-        <button className='close-modal-confirm' onClick={close}>X</button>
        
       </div>
     </div>
   );
 };
 
-export default Modal;
+export default Confirm;

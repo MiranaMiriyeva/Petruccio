@@ -41,7 +41,7 @@ body{
   left: 50px;
   display: grid;
   gap: 100px;
-  animation:float 10s linear infinite;
+  animation:float 3s linear infinite;
 }
 .aboutus-right-icons{
   position: absolute;
@@ -49,7 +49,7 @@ body{
   right: 50px;
   display: grid;
   gap: 100px;
-	animation:float 10s linear infinite;
+	animation:float 3s linear infinite;
 }@media (max-width: 1290px) {
 	
   .aboutus-left-icons{

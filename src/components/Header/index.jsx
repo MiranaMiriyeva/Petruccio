@@ -12,9 +12,9 @@ const Header = () => {
   return (
     <div>
       <header className='header'>
-        <a href="#" className="logo">
+        <Link to="/"  className="logo">
           <img  src="https://d3q0fpse3wbo5h.cloudfront.net/production/uploads/innovations/a56ad223cc8c22677ab3df8350440ba7.jpg" alt="logo" />
-        </a>
+        </Link>
         <div className="navbar">
           <Link to='/'>Home</Link>
           <Link to='/menu'>Menu</Link>

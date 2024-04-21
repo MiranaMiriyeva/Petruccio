@@ -1,11 +1,20 @@
-import React, {  useEffect}  from 'react';
+import React, {  useEffect, useRef, useState }  from 'react';
 import "./style.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar as fasStar, faStar as farStar, faArrowAltCircleUp, faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import ScrollReveal from 'scrollreveal';
+import { getTop } from '../../provider/backToTop';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/pagination';
 
 
+// import required modules
+import { FreeMode, Pagination } from 'swiper/modules';
 const Home = () => {
   useEffect(() => {
     const sr = ScrollReveal ({
@@ -29,7 +38,7 @@ const Home = () => {
             <p>Experience the perfect blend of flavors with our pizzas.<br />
             Crafted with the freshest ingredients for your enjoyment.
             </p>
-            <Link className='btn' to='/menu'>Choose A Pizza</Link>
+            <Link className='btn' to='/menu' onClick={() => getTop()}>Choose A Pizza</Link>
           </div>
           <div className="home-img">
             <img  src="https://simbapizza.am/cache/1677643035.jpg" alt="home" />
@@ -45,7 +54,7 @@ const Home = () => {
     <p>
     Indulge in dishes crafted with love. From our kitchen to your plate, every bite tells a story of passion and flavor. Our commitment to quality ingredients and attention to detail ensures a culinary experience that delights the senses.
     </p>
-    <Link className='btn' to='/menu'>Order Now</Link>
+    <Link className='btn' to='/menu' onClick={() => getTop()}>Order Now</Link>
   </div>
 </section>
 <section className="gallery" id="gallery">
@@ -57,7 +66,7 @@ const Home = () => {
     <div className="box-gallery">
       <img className="image-gallery" src="https://www.paulinacocina.net/wp-content/uploads/2023/09/pizza-margherita-paulina-cocina-recetas.jpg" alt="" />
       <div className="content-gallery">
-        <img src="https://t3.ftcdn.net/jpg/02/36/03/66/360_F_236036622_ctUjaJTkIANvk9pJh0s5ZJRDWbM8ggT9.jpg" alt="" />
+        <img src="https://cdn-icons-png.flaticon.com/512/7183/7183811.png" alt="" />
         <h3>flavorful pizza</h3>
         <p>
           Our flavorful pizza made with the finest ingredients ensures a taste sensation.
@@ -67,10 +76,10 @@ const Home = () => {
     </div>
 
     <div className="box-gallery">
-      <img className="image-gallery" src="https://bloximages.newyork1.vip.townnews.com/bakersfield.com/content/tncms/assets/v3/editorial/4/db/4db87e46-91eb-11e8-955c-77632055da21/5b5b9b4e1f291.image.jpg?resize=1200%2C800" alt="" />
+      <img className="image-gallery" src="https://t3.ftcdn.net/jpg/03/50/41/38/360_F_350413831_Db4MUWuI16d1ZdVLSyS3EggemYEYTMmX.jpg" alt="" />
       <div className="content-gallery">
-        <img src="https://t3.ftcdn.net/jpg/02/36/03/66/360_F_236036622_ctUjaJTkIANvk9pJh0s5ZJRDWbM8ggT9.jpg" alt="" />
-        <h3>handmade lemonades</h3>
+        <img src="https://static.vecteezy.com/system/resources/previews/012/397/059/original/icon-of-coffee-mocha-or-cappuccino-vector.jpg" alt="" />
+        <h3>aromatic coffee</h3>
         <p>
         Quench your thirst with our refreshing handmade lemonades.
         Refresh yourself with our lemonades, made from freshly squeezed lemons.
@@ -91,7 +100,7 @@ const Home = () => {
     <div className="box-gallery">
       <img className="image-gallery" src="https://media.istockphoto.com/id/537703317/tr/foto%C4%9Fraf/chicken-nuggets-with-ketchup.jpg?s=170667a&w=0&k=20&c=hx3t8-iWsJFfqIo5Fsy1aPuUa_3XTX5uyURelEa0vQE=" alt="" />
       <div className="content-gallery">
-        <img src="https://t3.ftcdn.net/jpg/02/36/03/66/360_F_236036622_ctUjaJTkIANvk9pJh0s5ZJRDWbM8ggT9.jpg" alt="" />
+        <img src="https://cdn-icons-png.flaticon.com/512/2011/2011313.png" alt="" />
         <h3>delicate sides</h3>
         <p>
         Explore our delicate sides, designed to complement your main course.
@@ -102,7 +111,7 @@ const Home = () => {
     <div className="box-gallery">
       <img className="image-gallery" src="https://media-assets.swiggy.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/rhoaiclqj1rrhfxnln5y" alt="" />
       <div className="content-gallery">
-        <img src="https://t3.ftcdn.net/jpg/02/36/03/66/360_F_236036622_ctUjaJTkIANvk9pJh0s5ZJRDWbM8ggT9.jpg" alt="" />
+        <img src="https://cdn-icons-png.flaticon.com/512/6978/6978223.png" alt="" />
         <h3>hot shawarma</h3>
         <p>
         Explore our delicate sides, designed to complement your main course.
@@ -124,7 +133,7 @@ const Home = () => {
     <div className="box-gallery">
       <img className="image-gallery" src="https://www.restaurant-hospitality.com/sites/restaurant-hospitality.com/files/styles/article_featured_retina/public/uploads/2015/02/red-velvet.jpg?itok=RbLT1RCt" alt="" />
       <div className="content-gallery">
-        <img src="https://t3.ftcdn.net/jpg/02/36/03/66/360_F_236036622_ctUjaJTkIANvk9pJh0s5ZJRDWbM8ggT9.jpg" alt="" />
+        <img src="https://media.istockphoto.com/id/1066261730/vector/cake-slice-drawing.jpg?s=612x612&w=0&k=20&c=BtUQfXODkc6EE_vZ_J8K-OCNt8xUnbkfhqxOMaAuiU8=" alt="" />
         <h3>yummy sweets</h3>
         <p>
         Indulge in our yummy sweets, ranging from cakes to cookies.
@@ -216,7 +225,7 @@ const Home = () => {
               our pizzas are crafted with the finest ingredients to satisfy your taste buds.
               Indulge in our delicious range of pizzas, each one bursting with flavor and quality.
             </p>
-            <Link className='btn' to='/menu'>Explore Our Pizza Menu</Link>
+            <Link className='btn' to='/menu' onClick={() => getTop()}>Explore Our Pizza Menu</Link>
           </div>
 
         </section>
@@ -230,7 +239,17 @@ const Home = () => {
       Our Customers <span> Reviews</span>{" "}
     </h1>
     <div className="box-container-review">
-      <div className="box-review">
+    <Swiper
+        slidesPerView={3}
+        spaceBetween={30}
+        freeMode={true}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[FreeMode, Pagination]}
+        className="mySwiper"
+      >
+        <SwiperSlide> <div className="box-review">
         <img src="https://reductress.com/wp-content/uploads/2019/06/petite-woman-1-820x500.jpg" alt="" />
         <h3>Sarah Taylor</h3>
         <div className="stars">
@@ -243,8 +262,8 @@ const Home = () => {
         <p>
         "The food at here was absolutely delicious! The atmosphere was cozy and welcoming, and the service was top-notch. I can't wait to come back for another meal."
         </p>
-      </div>
-      <div className="box-review">
+      </div></SwiperSlide>
+        <SwiperSlide> <div className="box-review">
         <img src="https://t4.ftcdn.net/jpg/04/56/51/91/360_F_456519184_CDS9Trh77ukgYikJ7WwxjIj8z0ylOdG2.jpg" alt="" />
         <h3>john deo</h3>
         <div className="stars">
@@ -255,10 +274,10 @@ const Home = () => {
       <FontAwesomeIcon icon={farStar} />
     </div>
         <p>
-        "My experience at here was fantastic. The flavors were exquisite, and each dish was beautifully presented. The staff was friendly and attentive, making it a memorable dining experience."
+        "My experience at here was fantastic. The flavors were exquisite, and each dish was beautifully presented. The staff was friendly and attentive."
         </p>
-      </div>
-      <div className="box-review">
+      </div></SwiperSlide>
+        <SwiperSlide>   <div className="box-review">
         <img src="https://techgirlsglobal.org/wp-content/uploads/2023/01/79F8E534-17E4-47A6-88A0-8B9D19811879-%E5%BC%B5%E6%81%A9%E6%85%88-Grace-Chang.jpg" alt="" />
         <h3>Lee Hye-jin</h3>
         <div className="stars">
@@ -268,9 +287,80 @@ const Home = () => {
       <FontAwesomeIcon icon={fasStar} />
     </div>
         <p>
-        "I had a wonderful time at here The food was exceptional, with a great variety to choose from. The ambiance was lovely, and the staff made sure we had everything we needed. I highly recommend it to anyone looking for a great meal."
+        "I had a wonderful time at here The food was exceptional, with a great variety to choose from. The ambiance was lovely, and the staff made sure we had everything we needed. "
         </p>
-      </div>
+      </div></SwiperSlide>
+        <SwiperSlide> <div className="box-review">
+        <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGZha2UlMjBwZW9wbGV8ZW58MHx8MHx8fDA%3D" alt="" />
+        <h3>Jack Smith</h3>
+        <div className="stars">
+      <FontAwesomeIcon icon={fasStar} />
+      <FontAwesomeIcon icon={fasStar} />
+      <FontAwesomeIcon icon={fasStar} />
+      <FontAwesomeIcon icon={fasStar} />
+      <FontAwesomeIcon icon={farStar} />
+    </div>
+        <p>
+        "I love this place! The burgers are always juicy and the fries are crispy. The service is quick and the prices are reasonable. Definitely my go-to spot for a quick bite."
+        </p>
+      </div></SwiperSlide>
+        <SwiperSlide>  <div className="box-review">
+        <img src="https://images.unsplash.com/photo-1525517450344-d08c6a528e3c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+        <h3>Sophia Martinez</h3>
+        <div className="stars">
+      <FontAwesomeIcon icon={fasStar} />
+      <FontAwesomeIcon icon={fasStar} />
+      <FontAwesomeIcon icon={fasStar} />
+      <FontAwesomeIcon icon={fasStar} />
+    </div>
+        <p>
+        "Decent food, but nothing extraordinary. The menu is quite limited and the ambiance could use some improvement. However, the staff is friendly and the location is convenient."
+        </p>
+      </div></SwiperSlide>
+        <SwiperSlide> <div className="box-review">
+        <img src="https://images.unsplash.com/photo-1481214110143-ed630356e1bb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGZha2UlMjBwZW9wbGV8ZW58MHx8MHx8fDA%3D" alt="" />
+        <h3>Emily Johnson</h3>
+        <div className="stars">
+      <FontAwesomeIcon icon={fasStar} />
+      <FontAwesomeIcon icon={fasStar} />
+      <FontAwesomeIcon icon={fasStar} />
+      <FontAwesomeIcon icon={fasStar} />
+      <FontAwesomeIcon icon={fasStar} />
+    </div>
+        <p>
+        "I was pleasantly surprised by the quality of the food here. The burgers are flavorful and the portions are generous. It's a great spot for a casual meal with friends."
+        </p>
+      </div></SwiperSlide>
+        <SwiperSlide>   <div className="box-review">
+        <img src="https://images.unsplash.com/photo-1611403119860-57c4937ef987?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fGZha2UlMjBwZW9wbGV8ZW58MHx8MHx8fDA%3D" alt="" />
+        <h3>Ha Nguyen</h3>
+        <div className="stars">
+      <FontAwesomeIcon icon={fasStar} />
+      <FontAwesomeIcon icon={fasStar} />
+      <FontAwesomeIcon icon={fasStar} />
+      <FontAwesomeIcon icon={fasStar} />
+      <FontAwesomeIcon icon={fasStar} />
+    </div>
+        <p>
+        "The best fast food joint in town! The burgers are mouthwatering and the milkshakes are to die for. I love the retro vibe of the place too. Can't get enough of it."
+        </p>
+      </div></SwiperSlide>
+        <SwiperSlide>  <div className="box-review">
+        <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTM4fHxmYWtlJTIwcGVvcGxlfGVufDB8fDB8fHww" alt="" />
+        <h3>Ian Dooley</h3>
+        <div className="stars">
+      <FontAwesomeIcon icon={fasStar} />
+      <FontAwesomeIcon icon={fasStar} />
+      <FontAwesomeIcon icon={fasStar} />
+      <FontAwesomeIcon icon={fasStar} />
+      <FontAwesomeIcon icon={fasStar} />
+    </div>
+        <p>
+        "The food was good, the service was friendly, and the prices were fair. It's not the fanciest place, but it hits the spot when you're craving some classic fast food."
+        </p>
+      </div></SwiperSlide>
+      </Swiper>
+    
     </div>
   </section>
   {/* review section ends */}
