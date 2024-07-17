@@ -70,7 +70,11 @@ header{
 	font-size: 14px;
 	font-weight: bold;
   }
-@media   (max-width: 900px) {
+/* @media   (max-width: 900px) {
+	header{
+		display: flex;
+		flex-direction: column;
+	}
 	.navbar {
 		display: grid;
 	  position: relative;
@@ -93,8 +97,8 @@ header{
 		height: 60px;
 		padding-right: 10px;
 	}
-  }
-  @media (max-width: 476px) {
+  } */
+  @media (max-width: 1024px) {
 	
 	header{
 		display: flex;

@@ -31,7 +31,7 @@
     "react-router-dom": "^6.18.0",
     "redux": "^5.0.0",
     "scrollreveal": "^4.0.9",
-    "swiper": "^11.0.6"
+    "swiper": "^11.1.5"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

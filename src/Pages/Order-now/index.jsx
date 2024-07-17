@@ -145,7 +145,7 @@ const Orders = () => {
     totalPrice += item.price * item.count;
   });
   return (
-    <div>
+    <div >
          {orders.length > 0 ? (
           <>
       <h1 className='categoryname-orders'>Your Orders</h1>
@@ -154,27 +154,36 @@ const Orders = () => {
           <div className='card-container-orders' key={item.name}>
             <div className='card-orders'>
               <div className='baseline'>
-                <h2 className='item-name-orders'>{item.name}</h2>
-                <img width={'200px'}  src={item.image} alt={item.name} />
+              
+                <img width={'200px'} src={item.image} alt={item.name} />
+                <div className="card-orders-details">
+                  <h2 className='item-name-orders'>{item.name}</h2>
+                  <button className='price-orders'>$ {item.price * item.count} </button>
+                </div>
+               
               </div>
              <div className='left-side-orders'>
-             <div className="actions">
-             <button onClick={() => handleDecrease(item.id)}>-</button>
-              <span className='order-count'>{item.count}</span>
-             <button onClick={() => handleIncrease(item.id)}>+</button>
-             </div>
-              <button className='price-orders'>{item.price*item.count} $</button>
-              </div>
-              <span className='trash-icon' onClick={() => dis(removeFromOrders(item.id))}>
-                <FontAwesomeIcon
+                <div className="actions">
+                 
+                  <button onClick={() => handleDecrease(item.id)}>
+                    {item.count > 1 ? ("-") :
+                      (<FontAwesomeIcon
                   icon={faTrashAlt}
                   style={{
                    
-                    color: 'red',
-                    fontSize: '2em',
+                    color: 'orange',
+                    fontSize: '0.8em',
                   }}
-                />
+                />)}</button>
+              <span className='order-count'>{item.count}</span>
+             <button onClick={() => handleIncrease(item.id)}>+</button>
+             </div>
+            
+              
+              <span className='trash-icon' onClick={() => dis(removeFromOrders(item.id))}>
+             Remove
               </span>
+            </div>
             </div>
             <hr />
           </div>

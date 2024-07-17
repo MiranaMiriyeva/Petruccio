@@ -1,3 +1,4 @@
+
 .categoryname-orders{
   display: flex;
   justify-content: center;
@@ -19,56 +20,75 @@
     position: relative;
     justify-content: space-between;
 }
+.card-orders-details{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  
+}
+.card-orders-details h2{
+  padding-left: 25px;
+}
 .card-orders img {
   max-width: 50%;
   height: 100px;
+  width: 100px;
   object-fit: cover;
   margin-bottom: 10px;
 }
 
 .baseline{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 .price-orders{
     color: black;
-    padding: 10px 20px;
-    border: 1px solid green;
+    padding: 0px 20px 15px 28px;
+    margin-bottom: 20px;
+    /* border: 1px solid green; */
     text-decoration: none;
-    font-size: 25px;
-    
+    font-size: 20px;
     cursor: pointer;
     display: flex;
     text-align: end;
+    border-radius: 10px;
+    /* width: 100px; */
+    border: none;
+    height: 40px;
+    
 }
 .left-side-orders{
   display: flex;
-  flex-direction: row;
-  gap: 50px;
+  flex-direction: column;
+  gap: 5px;
 }
 .trash-icon{
     cursor: pointer;
+    padding-left: 30px;
+    color: red;
 }
 .item-name-orders{
   margin:  15px 0;
 }
 .actions {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
 .actions button {
   padding: 5px 15px;
-  border: 1px solid red;
+ border: none;
   background-color: #fff;
-  color: red;
+  color: #ff6600;
   font-size: 14px;
   cursor: pointer;
-  border-radius: 50%;
+  border-radius: 20%;
+  box-shadow: inset 0px 1px 10px rgba(205, 140, 9, 0.15);
 }
 
 .actions button:hover {
- box-shadow: inset 0px 1px 20px rgba(255, 0, 0, 0.333);
+ box-shadow: inset 0px 1px 20px rgba(205, 140, 9, 0.15);
 }
 
 .actions span.order-count {
@@ -230,7 +250,7 @@
   margin: 5px 15px 0 5px;
 }
 .total-price p{
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
   font-size: 25px;
   text-decoration: underline;
  
@@ -263,9 +283,22 @@
   .card-orders {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 10px;
   }
-
+.card-orders-details, .card-orders-details h2{
+width: 300px;
+text-align: center;
+padding: 0 0 5px 0;
+margin: 0;
+}
+.price-orders{
+  text-align: center;
+  margin: 0 auto;
+}
+.baseline{
+  flex-direction: column;
+}
   .left-side-orders {
     flex-direction: column;
     gap: 20px;
@@ -274,7 +307,7 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    margin-left: 20%;
+    margin-left: 33%;
   }
   .trash-icon{
     margin: 5% 0%;
@@ -288,5 +321,14 @@
   .categoryname-orders{
     margin-top: 40%;
     
+  }
+}
+@media screen and (max-width: 380px) {
+  .card-orders-details, .card-orders-details h2{
+    max-width:250px;
+    
+  }
+  .baseline{
+    max-width: 250px;
   }
 }

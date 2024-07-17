@@ -9,11 +9,6 @@ import Modal from '../Modals/AddedToOrder';
 import { data } from '../../Db/Data';
 import ScrollReveal from 'scrollreveal';
 
-
-
-
-
-
 const Menu = () => {
   const favorites = useSelector(state => state.favorites)
   const dispatch = useDispatch();
@@ -64,6 +59,7 @@ const Menu = () => {
                           right: '5px',
                           color: '#ff0000',
                           fontSize: '2.5em',
+                          borderRadius: '50%',
                         }}
                       />
                     </span>
@@ -77,6 +73,7 @@ const Menu = () => {
                           right: '5px',
                           color: '#ff0000',
                           fontSize: '2.5em',
+                          borderRadius: '50%',
                         }}
                       />
                     </span>

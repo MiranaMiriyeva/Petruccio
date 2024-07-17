@@ -141,6 +141,7 @@ left: 0;
 	font-weight: 600;
 	border-radius: 5rem;
 	transition: all .38s ease;
+  border: none;
  
 }
 
@@ -158,6 +159,8 @@ left: 0;
     
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
    
   }
   .categoryname-favorite{

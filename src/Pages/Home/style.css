@@ -2,7 +2,7 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	font-family: 'Raleway', sans-serif;
+	font-family: "Nunito", sans-serif; 
 	text-decoration: none;
 	list-style: none;
 	scroll-behavior: smooth;
@@ -86,7 +86,7 @@ header.sticky {
 	background: url(src/images/home-bg.jpg);
 	background-size: cover;
 	background-position: center;
-	min-height: 100vh;
+	/* min-height: 100vh; */
 	display: flex;
 
 	align-items: center;
@@ -331,6 +331,7 @@ header.sticky {
 	box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 	transition: all .40s ease;
 	background-color: #fff;
+	margin: 10px 0;
 }
 
 .container-text p {
@@ -506,12 +507,40 @@ header.sticky {
 	}
 
 	.home {
-		height: 80vh;
+		height: 40vh;
 	}
 
 	.main-text {
 		text-align: center;
 	}
+}
+@media (max-width: 1024px){
+	.main-gallery-box{
+		grid-template-columns: 1fr 1fr;
+		margin: 20px 0 0 10px;
+	}
+	.review .box-container-review .box-review {
+
+		margin: 6rem 0px 0 0px;
+	   
+	}
+	.main-gallery-box .box-gallery .image-gallery {
+		height: 250px;
+		width: 350px;
+		object-fit: cover;
+	
+	
+	}
+}
+@media (max-width: 800px){
+	.main-gallery-box{
+		grid-template-columns: 1fr ;
+	}
+
+
+.home {
+	height: 50vh;
+}
 }
 
 @media (max-width: 576px) {
@@ -519,6 +548,7 @@ header.sticky {
 		grid-template-columns: 1fr;
 		gap: 1rem;
 		padding: 30px;
+		height: 65vh;
 	}
 
 	.home-burger .image,
@@ -532,7 +562,10 @@ header.sticky {
 		max-width: 100%;
 
 	}
-
+	.swiper-slide{
+	
+		margin-left: 0px;
+	}
 	.home-text h1 {
 		font-size: 25px;
 	}
@@ -561,7 +594,7 @@ header.sticky {
 	}
 
 	.box-review {
-		width: 300px;
+		width: 250px;
 
 	}
 
@@ -575,6 +608,15 @@ header.sticky {
 		flex-direction: column;
 	}
 
+	.about-img img {
+		padding-top: 50px;
+		height: auto;
+		width: 100%;
+		transform: rotate(0deg);
+		text-transform: capitalize;
+		animation: rotate 0s linear infinite;
+		
+	}
 	.scroll-top {
 		position: fixed;
 		bottom: 2.2rem;
@@ -631,4 +673,14 @@ header.sticky {
 	.home-img img {
 		width: 100%;
 	}
-}
+}@media (max-width: 400px) {
+	.home {
+	
+		height: 55vh;
+	}}
+
+@media (max-width: 350px) {
+	.home {
+	
+		height: 50vh;
+	}}

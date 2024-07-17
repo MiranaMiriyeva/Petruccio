@@ -5,21 +5,21 @@ export const data = [
             {
                 id: 1,
                 name: 'Whopper Burger',
-                description: '100% beef patty, melted cheddar cheese, fresh onions, cucumber, tomato, fresh Iceberg lettuce and special sauce on a caramelized bun with sesame.',
+                description: '100% beef patty, melted cheddar cheese, fresh onions, cucumber, tomato, lettuce and special sauce on a caramelized bun.',
                 price: 13,
                 image: 'https://mcdonalds.az/images/815d8c4402392f0eb452a447dc73140d.png',
             },
             {
                 id: 2,
                 name: "Cheeseburger",
-                description: "A classic combination including a 100% pure beef patty, pickles, onion, mustard and ketchup, and of course, a slice of melted Cheddar cheese in a caramelized bun.",
+                description: "A  pure beef patty, pickles, mustard and ketchup, a slice of melted Cheddar cheese in a caramelized bun.",
                 price: 11,
                 image: "https://mcdonalds.az/images/ee319a4ff071706b3352def29b3927f9.png"
             },
             {
                 id: 3,
                 name: "D-Cheeseburger",
-                description: "Two 100% beefy patties, two slices of melted cheese, tangy pickles, minced onions, ketchup and mustard served in a caramelized bun.",
+                description: "Two 100% beefy patties, two slices of melted cheese, ketchup and mustard served in a caramelized bun.",
                 price: 13,
                 image: "https://mcdonalds.az/images/da395e10a80b079a241fd7897eea003c.png"
             },
@@ -42,7 +42,7 @@ export const data = [
             {
                 id: 6,
                 name: "Long Chicken",
-                description: "Delightfully tasty crispy chicken fillet topped with shredded lettuce and creamy mayo, and served on a sesame seed bun-made extra long.",
+                description: "Delightfully chicken fillet topped with shredded lettuce and creamy mayo, and served on a sesame seed bun-made extra long.",
                 price: 15,
                 image: "https://www.burgerking.com.my/upload/image/Product/101/J1001846-BKMY-FRENCHCHICKENCOMEBACK-WEBSITESKU-300x270.png"
             },
@@ -58,7 +58,7 @@ export const data = [
             {
                 id: 8,
                 name: "Caesar Roll",
-                description: "Fried chicken breast fillet, Iceberg lettuce, a slice of tomato, shaved cheese and Caesar dressing, all wrapped up in a wholemeal tortilla.",
+                description: "Fried chicken breast fillet, Iceberg lettuce, a slice of tomato, all wrapped up in a wholemeal tortilla.",
                 price: 14,
                 image: "https://mcdonalds.az/images/71377b54408129509939dcdf7d66fb39.png"
             },
@@ -72,7 +72,7 @@ export const data = [
                 name: 'Margherita',
                 description: 'Pizza sauce, gouda cheese, mozzarella cheese, tomatoes',
                 price: 23,
-                image: 'https://pizzamizza.az/upload/resize_cache/iblock/0ed/254_254_2/0ed089822bbaafc76d70f1c04dff1342.png?1712401835143577',
+                image: 'https://pizzamizza.az/upload/iblock/9c5/9c569f8bc8a550ac6d2df4ba7f00b077.png?1714726490495643',
             },
             {
                 id: 10,
@@ -86,7 +86,7 @@ export const data = [
                 name: "Pepperoni",
                 description: "Ranch Sauce, Grilled Chicken, Mushrooms, Jalapeno, Tomatoes, Mozzarella",
                 price: 21,
-                image: "https://pizzamizza.az/upload/resize_cache/iblock/cca/254_254_2/cca9977086c1f63027e655ce03699a22.png?1712401836153532"
+                image: "https://pizzamizza.az/upload/iblock/7b9/7b98c0abd2a63ad21ad27470c026834c.png?1716032769533852"
             },
             {
                 id: 12,
@@ -100,7 +100,7 @@ export const data = [
                 name: "Super Pizza",
                 description: "Pizza Sauce, Pepperoni, Italian Sausage, Turkey Ham, Mushrooms, Green Peppers, Black Olives, Mozzarella",
                 price: 26,
-                image: "https://pizzamizza.az/upload/resize_cache/iblock/4be/254_254_2/4be04fd170efd12b777fd8d8fe8e4125.jpg?161761730369435"
+                image: "https://pizzamizza.az/upload/iblock/4c9/4c927d74461d6667ed52fadf07d7eaa6.png?1712401827554530"
             },
             {
                 id: 14,
@@ -121,7 +121,7 @@ export const data = [
                 name: "Four Seasons",
                 description: "Pizza sauce, gouda cheese, white cheese, ham (halal), sucuk, mushrooms, tomatoes, oregano",
                 price: 30,
-                image: "https://pizzamizza.az/upload/resize_cache/iblock/a4e/254_254_2/a4eab620f903bfb59ec4dcdd2b02da14.jpg?162776386077449"
+                image: "https://pizzamizza.az/upload/iblock/be5/be5c9beef0cea1cfdaf71fbac89652c1.png?1712401828531415"
             },
         ],
     },
