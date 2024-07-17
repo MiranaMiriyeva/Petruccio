@@ -539,7 +539,7 @@ header.sticky {
 
 
 .home {
-	height: 50vh;
+	height: 70vh;
 }
 }
 
@@ -548,7 +548,7 @@ header.sticky {
 		grid-template-columns: 1fr;
 		gap: 1rem;
 		padding: 30px;
-		height: 65vh;
+		height: 70vh;
 	}
 
 	.home-burger .image,
@@ -676,7 +676,7 @@ header.sticky {
 }@media (max-width: 400px) {
 	.home {
 	
-		height: 55vh;
+		height: 70h;
 	}}
 
 @media (max-width: 350px) {

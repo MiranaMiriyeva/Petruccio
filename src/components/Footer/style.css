@@ -4,7 +4,7 @@
 }
 .main-contact{
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+	grid-template-columns: repeat(1fr 1fr 1fr 1fr);
 	justify-content: center;
 	gap: 2rem;
 }
@@ -46,3 +46,13 @@
 	background: var(--main-color);
 	border-radius: 5rem;
 }
+@media (max-width: 1024px) {
+	
+	.main-contact{
+		display: grid;
+		grid-template-columns: repeat(1fr 1fr );
+		/* justify-content: center; */
+		gap: 2rem;
+	}
+  }
+  

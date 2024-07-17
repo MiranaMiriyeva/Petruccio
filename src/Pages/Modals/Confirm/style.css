@@ -21,3 +21,15 @@
       transform: translateX(110%); 
     }
   }
+  @media (max-width:800px){
+    .modal-container-confirm {
+      position: fixed;
+      top: 20%;
+      right: 1%; 
+      margin: auto 10px; 
+      z-index: 2;
+      text-decoration: none;
+      animation: slideInOut 4s forwards; 
+    }
+    
+  }

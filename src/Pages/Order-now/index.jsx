@@ -203,8 +203,8 @@ const Orders = () => {
       {accordionOpen && (
         <div className="accordion-content">
           <div className="order-form">
-            <label htmlFor="firstName">First Name:</label>
-            <input type="text" id="firstName" placeholder='John' value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+            <label htmlFor="firstName">Full Name:</label>
+            <input type="text" id="firstName" placeholder='John Doe' value={firstName} onChange={(e) => setFirstName(e.target.value)} />
 
             <label htmlFor="phoneNumber">Phone Number:</label>
             <input type="tel" id="phoneNumber" placeholder='+555-555-5555' value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
